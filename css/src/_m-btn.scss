@@ -5,8 +5,13 @@
     --btn-bg--active: #c5c5c5;
     --btn-box-shadow--hover: rgba(233, 233, 233, 0.4);
 
+    margin: 0;
+    border: none;
+    padding: 10px 15px;
     color: var(--body-txt);
+    font-weight: bold;
     background-color: var(--btn-bg);
+    border-radius: 6px;
 
     &:hover {
         background-color: var(--btn-bg--hover);
