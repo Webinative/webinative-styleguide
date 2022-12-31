@@ -3,8 +3,36 @@
     --light-blue: #29abe2;
     --user-selection: #9bdffc;
     --title-txt: #000;
+    --white-txt: #ffffff;
     --body-txt: #494949;
+    --body-bg: #ffffff;
     --link-visited: #a05fe1;
+
+    --danger: #da394c;
+    --warning-txt: #c18d0a;
+    --info-txt: #4f7c8e;
+    --success-txt: #659e57;
+
+    --danger-bg: rgba(238, 162, 171, 0.25);
+    --warning-bg: rgba(248, 218, 141, 0.25);
+    --info-bg: rgba(181, 207, 218, 0.25);
+    --success-bg: rgba(194, 227, 186, 0.25);
+
+    @media (prefers-color-scheme: dark) {
+        --user-selection: #006292;
+        --body-bg: #222222;
+        --title-txt: #ffffff;
+        --body-txt: #dbdbdb;
+
+        --warning-txt: #dba00b;
+        --info-txt: #6ca9c2;
+        --success-txt: #86d173;
+
+        --danger-bg: rgba(186, 127, 134, 0.25);
+        --warning-bg: rgba(171, 150, 97, 0.25);
+        --info-bg: rgba(138, 157, 166, 0.25);
+        --success-bg: rgba(129, 150, 123, 0.25);
+    }
 }
 
 ::selection {
@@ -69,13 +97,6 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --user-selection: #006292;
-        --body-bg: #222222;
-        --title-txt: #ffffff;
-        --body-txt: #dbdbdb;
-    }
-
     ::selection {
         background-color: var(--user-selection);
     }
@@ -97,14 +118,9 @@ a {
     blockquote {
         --blockquote-bg: #303030;
         --blockquote-border: #4d4d4d;
-
-        border-left: 4px solid var(--blockquote-border);
-        background-color: var(--blockquote-bg);
     }
 
     code {
         --code-bg: #303030;
-
-        background-color: var(--code-bg);
     }
 }

@@ -126,6 +126,37 @@
             <span class="m-messages__desc">This is a success message that flows two lines full.</span>
         </li>
     </ul>
+
+    <!-- Input box -->
+    <div class="m-ip-textbox">
+        <label class="m-ip-textbox__label" for="default">Full name</label>
+
+        <input class="m-ip-textbox__input" type="text" id="default" name="full_name" placeholder="Placeholder text">
+    </div>
+
+    <div class="m-ip-textbox">
+        <label class="m-ip-textbox__label" for="help-text">Full name</label>
+
+        <p class="m-ip-textbox__help">Some help text.</p>
+
+        <input class="m-ip-textbox__input" type="text" id="help-text" name="full_name" value="Normal text input">
+    </div>
+
+    <div class="m-ip-textbox m-ip-textbox--has-error">
+        <label class="m-ip-textbox__label" for="error">Full name</label>
+
+        <p class="m-ip-textbox__help">How to correct this input</p>
+
+        <input class="m-ip-textbox__input" type="text" id="error" name="full_name" value="Normal text input">
+    </div>
+
+    <div class="m-ip-textbox">
+        <label class="m-ip-textbox__label" for="disabled">Full name</label>
+
+        <input class="m-ip-textbox__input" type="text" id="disabled" name="full_name" placeholder="Disabled input"
+            disabled>
+    </div>
+
 </body>
 
 </html>

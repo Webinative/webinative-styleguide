@@ -1,0 +1,83 @@
+.m-ip-textbox {
+    margin-block-end: 20px;
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        line-height: 150%;
+        font: {
+            size: 13.28px;
+            weight: bold;
+        }
+    }
+
+    &__input {
+        --ip-border: #c5c5c5;
+        --ip-bg: #fafafa;
+
+        border: 2px solid var(--ip-border);
+        padding: 10px 15px;
+        color: var(--body-txt);
+        background-color: var(--ip-bg);
+        border-radius: 6px;
+        outline: none;
+        font: {
+            size: inherit;
+            family: inherit;
+        }
+
+        &::-webkit-input-placeholder {
+            --ip-txt: #ababab;
+
+            color: var(--ip-txt);
+        }
+
+        &:focus {
+            background-color: var(--body-bg);
+            border: 2px solid var(--light-blue);
+        }
+
+        &:disabled {
+            --ip-border: #dedede;
+            --ip-bg: #efefef;
+        }
+    }
+
+    &__help {
+        margin-block: -2px 3px;
+    }
+
+    &--has-error &__input {
+        border: 2px solid var(--danger);
+    }
+
+    &--has-error &__help {
+        color: var(--danger);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        &__label {
+            color: var(--body-txt);
+        }
+
+        &__input {
+            --ip-border: #555555;
+            --ip-bg: #333333;
+
+            &::-webkit-input-placeholder {
+                --ip-txt: #6d6d6d;
+            }
+
+            &:focus {
+                background-color: var(--body-bg);
+            }
+
+            &:disabled {
+                --ip-border: #333333;
+
+                background-color: var(--body-bg);
+            }
+        }
+    }
+}
