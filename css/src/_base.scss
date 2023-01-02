@@ -18,6 +18,12 @@
     --info-bg: rgba(181, 207, 218, 0.25);
     --success-bg: rgba(194, 227, 186, 0.25);
 
+    --ip-placeholder-txt: #ababab;
+    --ip-border: #c5c5c5;
+    --ip-bg: #fafafa;
+    --ip-border--disabled: #dedede;
+    --ip-bg--disabled: #efefef;
+
     @media (prefers-color-scheme: dark) {
         --user-selection: #006292;
         --body-bg: #222222;
@@ -32,6 +38,12 @@
         --warning-bg: rgba(171, 150, 97, 0.25);
         --info-bg: rgba(138, 157, 166, 0.25);
         --success-bg: rgba(129, 150, 123, 0.25);
+
+        --ip-placeholder-txt: #6d6d6d;
+        --ip-border: #555555;
+        --ip-bg: #333333;
+        --ip-border--disabled: #333333;
+        --ip-bg--disabled: #222222;
     }
 }
 
