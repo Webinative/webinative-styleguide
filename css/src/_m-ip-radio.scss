@@ -1,0 +1,68 @@
+.m-ip-radio {
+    margin-block-end: 20px;
+
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: fit-content;
+        outline: none;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-inline-end: 8px;
+            border: 2px solid var(--ip-border);
+            background-color: var(--ip-bg);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        &:focus::before {
+            border-color: var(--light-blue);
+        }
+    }
+
+    &__input:disabled + &__label {
+        color: var(--ip-placeholder-txt);
+
+        &::before {
+            border-color: var(--ip-border--disabled);
+            background-color: var(--ip-bg--disabled);
+        }
+    }
+
+    &__input:checked + &__label {
+        &::before {
+            border-color: var(--success);
+            background-color: var(--success);
+        }
+
+        &:focus::before {
+            border-color: var(--light-blue);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            width: 14px;
+            height: 15px;
+            background-image: url("../wicons/ip-radio.svg");
+            background-size: 14px 15px;
+        }
+    }
+
+    &--inline {
+        display: inline-block;
+        margin-inline-end: 20px;
+    }
+}
