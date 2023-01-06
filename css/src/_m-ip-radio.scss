@@ -52,12 +52,13 @@
             content: "";
             display: block;
             position: absolute;
-            top: 6px;
-            left: 5px;
-            width: 14px;
-            height: 15px;
-            background-image: url("../wicons/ip-radio.svg");
-            background-size: 14px 15px;
+            top: 0px;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url("../wicons/sprite-ip-checked-icons.svg");
+            background-size: 24px 48px;
+            background-position: 0 -24px;
         }
     }
 

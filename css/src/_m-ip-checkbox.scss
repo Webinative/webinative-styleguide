@@ -52,12 +52,13 @@
             content: "";
             display: block;
             position: absolute;
-            top: 5px;
-            left: 3px;
-            width: 18px;
-            height: 15px;
-            background-image: url("../wicons/ip-checkmark.svg");
-            background-size: 18px 15px;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url("../wicons/sprite-ip-checked-icons.svg");
+            background-size: 24px 48px;
+            background-position: 0 0;
         }
     }
 
