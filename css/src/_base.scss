@@ -9,6 +9,10 @@
     --link-visited: #a05fe1;
 
     --danger: #da394c;
+    --warning: #f0b00d;
+    --info: #629ab1;
+    --success: #7ec46c;
+
     --warning-txt: #c18d0a;
     --info-txt: #4f7c8e;
     --success-txt: #659e57;
@@ -51,9 +55,14 @@
     background-color: var(--user-selection);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: var(--body-txt);
     font-family: "Mulish", sans-serif;
+    line-height: 150%;
 }
 
 h1,
@@ -64,6 +73,7 @@ h5,
 h6 {
     color: var(--title-txt);
     font-family: "Montserrat", sans-serif;
+    line-height: 120%;
 }
 
 h6 {
