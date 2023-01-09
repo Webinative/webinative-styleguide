@@ -16,6 +16,11 @@
     &__separator {
         display: block;
         width: 10px;    /* 16px + 10px + 16px = 42px */
+
+        &::before {
+            content: '...';
+            display: inline-block;
+        }
     }
 
     &__link {
