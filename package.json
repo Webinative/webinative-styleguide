@@ -7,7 +7,9 @@
     "compile:css": "sass --style compressed css/src/:css/dist/",
     "prefix:css": "postcss -u autoprefixer -r css/dist/*.css",
     "build:css": "yarn run compile:css && yarn run prefix:css",
-    "watch:css": "sass --style compressed --watch css/src/:css/dist/"
+    "watch:css": "sass --style compressed --watch css/src/:css/dist/",
+    "kss": "./node_modules/.bin/kss --config kss-config.json",
+    "watch:kss": "onchange 'css/src/*.scss' -- npm run kss"
   },
   "repository": "git@github.com:Webinative/webinative-styleguide.git",
   "author": "Magesh Ravi <magesh@webinative.com>",
@@ -15,6 +17,9 @@
   "private": false,
   "dependencies": {
     "autoprefixer": "^10.4.13",
+    "kss": "^3.1.0",
+    "kss-scheibo": "^1.11.0",
+    "onchange": "^7.1.0",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0"
   }

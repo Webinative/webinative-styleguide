@@ -7,270 +7,273 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webinative Styleguide</title>
 
+    <link rel="stylesheet" href="css/libs/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/dist/style.css">
 </head>
 
 <body>
-    <h1>Heading 1</h1>
+    <div id="view-content" style="max-width: 1024px; margin-inline: auto; padding: 16px;">
+        <h1>Heading 1</h1>
 
-    <h2>Heading 2</h2>
+        <h2>Heading 2</h2>
 
-    <h3>Heading 3</h3>
+        <h3>Heading 3</h3>
 
-    <h4>Heading 4</h4>
+        <h4>Heading 4</h4>
 
-    <h5>Heading 5</h5>
+        <h5>Heading 5</h5>
 
-    <h6>Heading 6</h6>
+        <h6>Heading 6</h6>
 
-    <p>I think we need to start from scratch. Jazz it up a little bit- use a funky color like purple.</p>
+        <p>I think we need to start from scratch. Jazz it up a little bit- use a funky color like purple.</p>
 
-    <p><strong>Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</strong></p>
+        <p><strong>Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</strong></p>
 
-    <p><em>Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</em></p>
+        <p><em>Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</em></p>
 
-    <p>I think we need to start from scratch. Jazz it up a little bit- use a funky color like purple.</p>
+        <p>I think we need to start from scratch. Jazz it up a little bit- use a funky color like purple.</p>
 
-    <ol>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-    </ol>
+        <ol>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ol>
 
-    <blockquote>Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</blockquote>
+        <blockquote>Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</blockquote>
 
-    <p>Install node packages using the command <code>yarn install</code></p>
+        <p>Install node packages using the command <code>yarn install</code></p>
 
-    <pre><code># install django <br>pip install django</code></pre>
+        <pre><code># install django <br>pip install django</code></pre>
 
-    <p>
-        <a href="#">Normal link</a>
+        <p>
+            <a href="#">Normal link</a>
+            <br>
+            <a href="#">Visited link</a>
+        </p>
+
+        <div>
+            <button class="m-btn">Button</button>
+            <button class="m-btn m-btn--primary">Button</button>
+            <button class="m-btn m-btn--secondary">Button</button>
+            <button class="m-btn m-btn--danger">Button</button>
+            <button class="m-btn m-btn--warning">Button</button>
+        </div>
+
+        <!-- Large Buttons -->
+        <div>
+            <button class="m-btn m-btn--large">Button</button>
+            <button class="m-btn m-btn--primary m-btn--large">Button</button>
+            <button class="m-btn m-btn--secondary m-btn--large">Button</button>
+            <button class="m-btn m-btn--danger m-btn--large">Button</button>
+            <button class="m-btn m-btn--warning m-btn--large">Button</button>
+        </div>
+
+        <!-- Compact Buttons -->
+        <div>
+            <button class="m-btn m-btn--compact">Button</button>
+            <button class="m-btn m-btn--primary m-btn--compact">Button</button>
+            <button class="m-btn m-btn--secondary m-btn--compact">Button</button>
+            <button class="m-btn m-btn--danger m-btn--compact">Button</button>
+            <button class="m-btn m-btn--warning m-btn--compact">Button</button>
+        </div>
+
+        <ul class="m-messages">
+            <li class="m-messages__item">
+                <span class="m-messages__close-btn"></span>
+
+                <span class="m-messages__desc">This is an error message</span>
+            </li>
+
+            <li class="m-messages__item m-messages__item--warning">
+                <span class="m-messages__close-btn"></span>
+
+                <span class="m-messages__desc">This is a warning</span>
+            </li>
+
+            <li class="m-messages__item m-messages__item--info">
+                <span class="m-messages__close-btn"></span>
+
+                <span class="m-messages__desc">This is an information</span>
+            </li>
+
+            <li class="m-messages__item m-messages__item--success">
+                <span class="m-messages__close-btn"></span>
+
+                <span class="m-messages__desc">This is a success message</span>
+            </li>
+        </ul>
+
+        <ul class="m-messages">
+            <li class="m-messages__item">
+                <span class="m-messages__close-btn"></span>
+
+                <span class="m-messages__desc">This is an error message that flows two lines full.</span>
+            </li>
+
+            <li class="m-messages__item m-messages__item--warning">
+                <span class="m-messages__close-btn"></span>
+
+                <span class="m-messages__desc">This is a warning that flows two lines full.</span>
+            </li>
+
+            <li class="m-messages__item m-messages__item--info">
+                <span class="m-messages__close-btn"></span>
+
+                <span class="m-messages__desc">This is an information that flows two lines full.</span>
+            </li>
+
+            <li class="m-messages__item m-messages__item--success">
+                <span class="m-messages__close-btn"></span>
+
+                <span class="m-messages__desc">This is a success message that flows two lines full.</span>
+            </li>
+        </ul>
+
+        <!-- Input box -->
+        <div class="m-ip-textbox">
+            <label class="m-ip-textbox__label" for="default">Full name</label>
+
+            <input class="m-ip-textbox__input" type="text" id="default" name="full_name" placeholder="Placeholder text">
+        </div>
+
+        <div class="m-ip-textbox">
+            <label class="m-ip-textbox__label" for="help-text">Full name</label>
+
+            <p class="m-ip-textbox__help">Some help text.</p>
+
+            <input class="m-ip-textbox__input" type="text" id="help-text" name="full_name" value="Normal text input">
+        </div>
+
+        <div class="m-ip-textbox m-ip-textbox--has-error">
+            <label class="m-ip-textbox__label" for="error">Full name</label>
+
+            <p class="m-ip-textbox__help">How to correct this input</p>
+
+            <input class="m-ip-textbox__input" type="text" id="error" name="full_name" value="Normal text input">
+        </div>
+
+        <div class="m-ip-textbox">
+            <label class="m-ip-textbox__label" for="disabled">Full name</label>
+
+            <input class="m-ip-textbox__input" type="text" id="disabled" name="full_name" placeholder="Disabled input"
+                disabled>
+        </div>
+
+        <!-- Textarea Elements -->
+        <div class="m-textarea">
+            <label class="m-textarea__label" for="default-textarea">Address</label>
+
+            <textarea class="m-textarea__input" id="default-textarea" name="address" placeholder="Placeholder text"
+                rows="6"></textarea>
+        </div>
+
+        <div class="m-textarea">
+            <label class="m-textarea__label" for="help-textarea">Address</label>
+
+            <p class="m-textarea__help">Some help text.</p>
+
+            <textarea class="m-textarea__input" id="help-textarea" name="address" rows="6"></textarea>
+        </div>
+
+        <div class="m-textarea m-textarea--has-error">
+            <label class="m-textarea__label" for="error-textarea">Address</label>
+
+            <p class="m-textarea__help">How to correct this text.</p>
+
+            <textarea class="m-textarea__input" id="error-textarea" name="address" rows="6"></textarea>
+        </div>
+
+        <div class="m-textarea">
+            <label class="m-textarea__label" for="disabled-textarea">Address</label>
+
+            <textarea class="m-textarea__input" id="disabled-textarea" name="address" placeholder="Disabled area" rows="6"
+                disabled></textarea>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="m-ip-checkbox">
+            <input type="checkbox" class="m-ip-checkbox__input" id="my-checkbox">
+
+            <label class="m-ip-checkbox__label" for="my-checkbox" tabindex="0">Checkbox</label>
+        </div>
+
+        <div class="m-ip-checkbox">
+            <input type="checkbox" class="m-ip-checkbox__input" id="disabled-checkbox" disabled>
+
+            <label class="m-ip-checkbox__label" for="disabled-checkbox">Checkbox</label>
+        </div>
+
+        <!-- Inline checkbox -->
+        <div class="m-ip-checkbox m-ip-checkbox--inline">
+            <input type="checkbox" class="m-ip-checkbox__input" id="milk" name="milk">
+
+            <label class="m-ip-checkbox__label" for="milk" tabindex="0">Milk</label>
+        </div>
+
+        <div class="m-ip-checkbox m-ip-checkbox--inline">
+            <input type="checkbox" class="m-ip-checkbox__input" id="eggs" name="eggs">
+
+            <label class="m-ip-checkbox__label" for="eggs" tabindex="0">Eggs</label>
+        </div>
+
+        <!-- Radio button -->
+        <div class="m-ip-radio">
+            <input type="radio" class="m-ip-radio__input" id="gender-male" name="gender" value="male">
+
+            <label class="m-ip-radio__label" for="gender-male" tabindex="0">Male</label>
+        </div>
+
+        <div class="m-ip-radio">
+            <input type="radio" class="m-ip-radio__input" id="gender-female" name="gender" value="female">
+
+            <label class="m-ip-radio__label" for="gender-female" tabindex="0">Female</label>
+        </div>
+
+        <div class="m-ip-radio">
+            <input type="radio" class="m-ip-radio__input" id="disabled-radio" disabled>
+
+            <label class="m-ip-radio__label" for="disabled-radio">Radio</label>
+        </div>
+
+        <!-- Inline radio button -->
+        <div class="m-ip-radio m-ip-radio--inline">
+            <input type="radio" class="m-ip-radio__input" id="il-gender-male" name="il_gender" value="male">
+
+            <label class="m-ip-radio__label" for="il-gender-male" tabindex="0">Male</label>
+        </div>
+
+        <div class="m-ip-radio m-ip-radio--inline">
+            <input type="radio" class="m-ip-radio__input" id="il-gender-female" name="il_gender" value="female">
+
+            <label class="m-ip-radio__label" for="il-gender-female" tabindex="0">Female</label>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="m-pagination">
+            <a class="m-pagination__link" href="#">1</a>
+
+            <span class="m-pagination__separator"></span>
+
+            <a class="m-pagination__link" href="#">4</a>
+            <a class="m-pagination__link current" href="#">5</a>
+            <a class="m-pagination__link" href="#">6</a>
+
+            <span class="m-pagination__separator"></span>
+
+            <a class="m-pagination__link" href="#">10</a>
+        </nav>
+
         <br>
-        <a href="#">Visited link</a>
-    </p>
 
-    <div>
-        <button class="m-btn">Button</button>
-        <button class="m-btn m-btn--primary">Button</button>
-        <button class="m-btn m-btn--secondary">Button</button>
-        <button class="m-btn m-btn--danger">Button</button>
-        <button class="m-btn m-btn--warning">Button</button>
+        <!-- tabs -->
+        <nav class="m-tab-group">
+            <a href="#" class="m-tab-group__link is-active">Inbox</a>
+            <a href="#" class="m-tab-group__link">Archives</a>
+            <a href="#" class="m-tab-group__link">Trash</a>
+        </nav>
+
+        <br>
     </div>
-
-    <!-- Large Buttons -->
-    <div>
-        <button class="m-btn m-btn--large">Button</button>
-        <button class="m-btn m-btn--primary m-btn--large">Button</button>
-        <button class="m-btn m-btn--secondary m-btn--large">Button</button>
-        <button class="m-btn m-btn--danger m-btn--large">Button</button>
-        <button class="m-btn m-btn--warning m-btn--large">Button</button>
-    </div>
-
-    <!-- Compact Buttons -->
-    <div>
-        <button class="m-btn m-btn--compact">Button</button>
-        <button class="m-btn m-btn--primary m-btn--compact">Button</button>
-        <button class="m-btn m-btn--secondary m-btn--compact">Button</button>
-        <button class="m-btn m-btn--danger m-btn--compact">Button</button>
-        <button class="m-btn m-btn--warning m-btn--compact">Button</button>
-    </div>
-
-    <ul class="m-messages">
-        <li class="m-messages__item">
-            <span class="m-messages__close-btn"></span>
-
-            <span class="m-messages__desc">This is an error message</span>
-        </li>
-
-        <li class="m-messages__item m-messages__item--warning">
-            <span class="m-messages__close-btn"></span>
-
-            <span class="m-messages__desc">This is a warning</span>
-        </li>
-
-        <li class="m-messages__item m-messages__item--info">
-            <span class="m-messages__close-btn"></span>
-
-            <span class="m-messages__desc">This is an information</span>
-        </li>
-
-        <li class="m-messages__item m-messages__item--success">
-            <span class="m-messages__close-btn"></span>
-
-            <span class="m-messages__desc">This is a success message</span>
-        </li>
-    </ul>
-
-    <ul class="m-messages">
-        <li class="m-messages__item">
-            <span class="m-messages__close-btn"></span>
-
-            <span class="m-messages__desc">This is an error message that flows two lines full.</span>
-        </li>
-
-        <li class="m-messages__item m-messages__item--warning">
-            <span class="m-messages__close-btn"></span>
-
-            <span class="m-messages__desc">This is a warning that flows two lines full.</span>
-        </li>
-
-        <li class="m-messages__item m-messages__item--info">
-            <span class="m-messages__close-btn"></span>
-
-            <span class="m-messages__desc">This is an information that flows two lines full.</span>
-        </li>
-
-        <li class="m-messages__item m-messages__item--success">
-            <span class="m-messages__close-btn"></span>
-
-            <span class="m-messages__desc">This is a success message that flows two lines full.</span>
-        </li>
-    </ul>
-
-    <!-- Input box -->
-    <div class="m-ip-textbox">
-        <label class="m-ip-textbox__label" for="default">Full name</label>
-
-        <input class="m-ip-textbox__input" type="text" id="default" name="full_name" placeholder="Placeholder text">
-    </div>
-
-    <div class="m-ip-textbox">
-        <label class="m-ip-textbox__label" for="help-text">Full name</label>
-
-        <p class="m-ip-textbox__help">Some help text.</p>
-
-        <input class="m-ip-textbox__input" type="text" id="help-text" name="full_name" value="Normal text input">
-    </div>
-
-    <div class="m-ip-textbox m-ip-textbox--has-error">
-        <label class="m-ip-textbox__label" for="error">Full name</label>
-
-        <p class="m-ip-textbox__help">How to correct this input</p>
-
-        <input class="m-ip-textbox__input" type="text" id="error" name="full_name" value="Normal text input">
-    </div>
-
-    <div class="m-ip-textbox">
-        <label class="m-ip-textbox__label" for="disabled">Full name</label>
-
-        <input class="m-ip-textbox__input" type="text" id="disabled" name="full_name" placeholder="Disabled input"
-            disabled>
-    </div>
-
-    <!-- Textarea Elements -->
-    <div class="m-textarea">
-        <label class="m-textarea__label" for="default-textarea">Address</label>
-
-        <textarea class="m-textarea__input" id="default-textarea" name="address" placeholder="Placeholder text"
-            rows="6"></textarea>
-    </div>
-
-    <div class="m-textarea">
-        <label class="m-textarea__label" for="help-textarea">Address</label>
-
-        <p class="m-textarea__help">Some help text.</p>
-
-        <textarea class="m-textarea__input" id="help-textarea" name="address" rows="6"></textarea>
-    </div>
-
-    <div class="m-textarea m-textarea--has-error">
-        <label class="m-textarea__label" for="error-textarea">Address</label>
-
-        <p class="m-textarea__help">How to correct this text.</p>
-
-        <textarea class="m-textarea__input" id="error-textarea" name="address" rows="6"></textarea>
-    </div>
-
-    <div class="m-textarea">
-        <label class="m-textarea__label" for="disabled-textarea">Address</label>
-
-        <textarea class="m-textarea__input" id="disabled-textarea" name="address" placeholder="Disabled area" rows="6"
-            disabled></textarea>
-    </div>
-
-    <!-- Checkbox -->
-    <div class="m-ip-checkbox">
-        <input type="checkbox" class="m-ip-checkbox__input" id="my-checkbox">
-
-        <label class="m-ip-checkbox__label" for="my-checkbox" tabindex="0">Checkbox</label>
-    </div>
-
-    <div class="m-ip-checkbox">
-        <input type="checkbox" class="m-ip-checkbox__input" id="disabled-checkbox" disabled>
-
-        <label class="m-ip-checkbox__label" for="disabled-checkbox">Checkbox</label>
-    </div>
-
-    <!-- Inline checkbox -->
-    <div class="m-ip-checkbox m-ip-checkbox--inline">
-        <input type="checkbox" class="m-ip-checkbox__input" id="milk" name="milk">
-
-        <label class="m-ip-checkbox__label" for="milk" tabindex="0">Milk</label>
-    </div>
-
-    <div class="m-ip-checkbox m-ip-checkbox--inline">
-        <input type="checkbox" class="m-ip-checkbox__input" id="eggs" name="eggs">
-
-        <label class="m-ip-checkbox__label" for="eggs" tabindex="0">Eggs</label>
-    </div>
-
-    <!-- Radio button -->
-    <div class="m-ip-radio">
-        <input type="radio" class="m-ip-radio__input" id="gender-male" name="gender" value="male">
-
-        <label class="m-ip-radio__label" for="gender-male" tabindex="0">Male</label>
-    </div>
-
-    <div class="m-ip-radio">
-        <input type="radio" class="m-ip-radio__input" id="gender-female" name="gender" value="female">
-
-        <label class="m-ip-radio__label" for="gender-female" tabindex="0">Female</label>
-    </div>
-
-    <div class="m-ip-radio">
-        <input type="radio" class="m-ip-radio__input" id="disabled-radio" disabled>
-
-        <label class="m-ip-radio__label" for="disabled-radio">Radio</label>
-    </div>
-
-    <!-- Inline radio button -->
-    <div class="m-ip-radio m-ip-radio--inline">
-        <input type="radio" class="m-ip-radio__input" id="il-gender-male" name="il_gender" value="male">
-
-        <label class="m-ip-radio__label" for="il-gender-male" tabindex="0">Male</label>
-    </div>
-
-    <div class="m-ip-radio m-ip-radio--inline">
-        <input type="radio" class="m-ip-radio__input" id="il-gender-female" name="il_gender" value="female">
-
-        <label class="m-ip-radio__label" for="il-gender-female" tabindex="0">Female</label>
-    </div>
-
-    <!-- Pagination -->
-    <nav class="m-pagination">
-        <a class="m-pagination__link" href="#">1</a>
-
-        <span class="m-pagination__separator"></span>
-
-        <a class="m-pagination__link" href="#">4</a>
-        <a class="m-pagination__link current" href="#">5</a>
-        <a class="m-pagination__link" href="#">6</a>
-
-        <span class="m-pagination__separator"></span>
-
-        <a class="m-pagination__link" href="#">10</a>
-    </nav>
-
-    <br>
-
-    <!-- tabs -->
-    <nav class="m-tab-group">
-        <a href="#" class="m-tab-group__link is-active">Inbox</a>
-        <a href="#" class="m-tab-group__link">Archives</a>
-        <a href="#" class="m-tab-group__link">Trash</a>
-    </nav>
-
-    <br>
 </body>
 
 </html>
