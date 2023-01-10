@@ -62,6 +62,19 @@
     box-sizing: border-box;
 }
 
+/*
+Body text
+
+Any text that appears within the body tag.
+
+Markup:
+<p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam labore laboriosam eum dolorum iure sed, itaque
+    repellendus ducimus optio beatae assumenda cupiditate est velit? Nemo impedit atque fugit. Consectetur, totam?
+</p>
+
+Styleguide Base.BodyText
+*/
 body {
     color: var(--body-txt);
     font-family: var(--body-font-family);

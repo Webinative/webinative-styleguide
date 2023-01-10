@@ -6,6 +6,8 @@ Frontend style guide for Webinative sites.
 
 1. Clone the repository using `git clone git@github.com:Webinative/webinative-styleguide.git`.
 1. Install node modules using `yarn install`.
+1. To compile SCSS, run `yarn build:css`.
+1. To generate KSS style guide, run `yarn kss`.
 
 ## VS Code extensions
 
