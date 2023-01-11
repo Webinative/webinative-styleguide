@@ -1,3 +1,21 @@
+/*
+Pagination
+
+Displays page numbers.
+
+Markup:
+<nav class="m-pagination">
+    <a class="m-pagination__link" href="#">1</a>
+    <span class="m-pagination__separator"></span>
+    <a class="m-pagination__link" href="#">4</a>
+    <a class="m-pagination__link current" href="#">5</a>
+    <a class="m-pagination__link" href="#">6</a>
+    <span class="m-pagination__separator"></span>
+    <a class="m-pagination__link" href="#">10</a>
+</nav>
+
+Styleguide Pagination.Current
+*/
 .m-pagination {
     --pagination-link-bg: #f4f4f4;
     --pagination-link-bg--current: rgba(41, 171, 226, 0.25);
@@ -15,7 +33,7 @@
 
     &__separator {
         display: block;
-        width: 10px;    /* 16px + 10px + 16px = 42px */
+        width: 10px; /* 16px + 10px + 16px = 42px */
 
         &::before {
             content: "...";

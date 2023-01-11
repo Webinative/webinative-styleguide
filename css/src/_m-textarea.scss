@@ -1,3 +1,19 @@
+/*
+Textarea (UI states)
+
+Input textarea user-interaction state.
+
+Markup:
+<div class="m-textarea">
+    <label class="m-textarea__label" for="default-textarea">Address</label>
+    <textarea class="m-textarea__input {{modifier_class}}" id="default-textarea" name="address" placeholder="Placeholder text"
+        rows="6"></textarea>
+</div>
+
+:focus - an element that received focus
+
+Styleguide Textarea.UIStates
+*/
 .m-textarea {
     margin-block-end: 20px;
 
@@ -28,7 +44,8 @@
             color: var(--ip-placeholder-txt);
         }
 
-        &:focus {
+        &:focus,
+        &.pseudo-class-focus {
             border: 2px solid var(--light-blue);
             background-color: var(--body-bg);
         }
@@ -51,3 +68,33 @@
         color: var(--danger);
     }
 }
+
+/*
+Textarea (error)
+
+Input textarea error state.
+
+Markup:
+<div class="m-textarea m-textarea--has-error">
+    <label class="m-textarea__label" for="error-textarea">Address</label>
+    <p class="m-textarea__help">How to correct this text.</p>
+    <textarea class="m-textarea__input" id="error-textarea" name="address" rows="6"></textarea>
+</div>
+
+Styleguide Textarea.Error
+*/
+
+/*
+Textarea (disabled)
+
+Input textarea disabled state.
+
+Markup:
+<div class="m-textarea">
+    <label class="m-textarea__label" for="disabled-textarea">Address</label>
+    <textarea class="m-textarea__input" id="disabled-textarea" name="address" placeholder="Disabled area"
+        rows="6" disabled></textarea>
+</div>
+
+Styleguide Textarea.Disabled
+*/
