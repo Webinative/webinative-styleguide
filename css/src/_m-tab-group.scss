@@ -16,7 +16,7 @@ Markup:
 Styleguide Tabs
 */
 .m-tab-group {
-    --tab-bg: #f4f4f4;
+    --tab-bg--hover: #f4f4f4;
     --tab-bg--active: #e7f6ff;
 
     display: flex;
@@ -37,7 +37,7 @@ Styleguide Tabs
         &:hover,
         &.pseudo-class-hover {
             border: 2px solid transparent;
-            background-color: var(--tab-bg);
+            background-color: var(--tab-bg--hover);
         }
 
         &:focus,
@@ -53,7 +53,7 @@ Styleguide Tabs
         }
 
         @media (prefers-color-scheme: dark) {
-            --tab-bg: #343434;
+            --tab-bg--hover: #343434;
             --tab-bg--active: #00486a;
 
             &.is-active {

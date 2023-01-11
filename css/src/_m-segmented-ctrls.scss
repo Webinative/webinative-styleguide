@@ -1,0 +1,79 @@
+/*
+Segmented controls
+
+Tab-like controls for use with icons inspired by macOS.
+
+Markup:
+<nav class="m-segmented-ctrls">
+    <a href="#" class="m-segmented-ctrls__link is-active">
+        <img src="https://cdn4.iconfinder.com/data/icons/24x24-free-pixel-icons/24/Brick_house.png" style="display: block">
+    </a>
+    <a href="#" class="m-segmented-ctrls__link">
+        <img src="https://cdn4.iconfinder.com/data/icons/24x24-free-pixel-icons/24/Clipboard.png" style="display: block">
+    </a>
+    <a href="#" class="m-segmented-ctrls__link">
+        <img src="https://cdn4.iconfinder.com/data/icons/24x24-free-pixel-icons/24/Heart.png" style="display: block">
+    </a>
+    <a href="#" class="m-segmented-ctrls__link">
+        <img src="https://cdn4.iconfinder.com/data/icons/24x24-free-pixel-icons/24/Yin-Yang.png" style="display: block">
+    </a>
+</nav>
+
+Styleguide SegmentedControls
+*/
+.m-segmented-ctrls {
+    --seg-ctrl-bg--hover: #f4f4f4;
+    --seg-ctrl-bg--active: #e7f6ff;
+    --seg-ctrl-separator-bg: #eaeaea;
+
+    display: flex;
+    column-gap: 5px;
+
+    &__link {
+        position: relative;
+        display: block;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+
+        &:hover {
+            border-block-end: none;
+            background-color: var(--seg-ctrl-bg--hover);
+        }
+
+        &.is-active {
+            border: 2px solid var(--light-blue);
+            padding: 8px;
+            background-color: var(--seg-ctrl-bg--active);
+        }
+
+        &.is-active + & {
+            margin-inline-start: -2px;
+        }
+
+        & + &::before {
+            display: block;
+            position: absolute;
+            left: -3px;
+            content: "";
+            height: 24px;
+            width: 1px;
+            background-color: var(--seg-ctrl-separator-bg);
+        }
+
+        &.is-active + &::before,
+        &.is-active::before {
+            display: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            --seg-ctrl-bg--hover: #343434;
+            --seg-ctrl-bg--active: #00486a;
+            --seg-ctrl-separator-bg: #3a3a3a;
+
+            &.is-active {
+                border-color: var(--dark-blue);
+            }
+        }
+    }
+}
