@@ -68,10 +68,10 @@ Body text
 Any text that appears within the body tag.
 
 Markup:
-<p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam labore laboriosam eum dolorum iure sed, itaque
-    repellendus ducimus optio beatae assumenda cupiditate est velit? Nemo impedit atque fugit. Consectetur, totam?
-</p>
+<p>I think we need to start from scratch. Jazz it up a little bit- use a funky color like purple.</p>
+<p><strong>Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</strong></p>
+<p><em>Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</em></p>
+<p>I think we need to start from scratch. Jazz it up a little bit- use a funky color like purple.</p>
 
 Styleguide Base.BodyText
 */
@@ -83,6 +83,21 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/*
+Headings
+
+Headings h1 to h6
+
+Markup:
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+Styleguide Base.Headings
+*/
 h1,
 h2,
 h3,
@@ -98,6 +113,16 @@ h6 {
     text-transform: uppercase;
 }
 
+/* 
+Blockquote
+
+For quoting text from another source.
+
+Markup:
+<blockquote>Can you add a bit of pastel pink and baby blue because the purple alone looks too fancy.</blockquote>
+
+Styleguide Base.Blockquote
+*/
 blockquote {
     --blockquote-bg: #f8f8f8;
     --blockquote-border: #d9d9d9;
@@ -109,12 +134,28 @@ blockquote {
     background-color: var(--blockquote-bg);
 }
 
+/*
+Code (inline)
+
+Markup:
+<p>Install node packages using the command <code>yarn install</code></p>
+
+Styleguide Base.CodeInline
+*/
 code {
     --code-bg: #f8f8f8;
 
     background-color: var(--code-bg);
 }
 
+/*
+Code (block)
+
+Markup:
+<pre><code># install django <br>pip install django</code></pre>
+
+Styleguide Base.CodeBlock
+*/
 pre {
     code {
         display: block;
@@ -122,16 +163,31 @@ pre {
     }
 }
 
+/*
+Link
+
+Anchor link with hover and visited state
+
+Markup:
+<a class="{{modifier_class}}" href="#">Normal link</a>
+
+:hover - mouse over state
+:visited - previously visited link
+
+Styleguide Base.Link
+*/
 a {
     color: var(--light-blue);
     text-decoration: none;
     border-bottom: 1px dashed;
 
-    &:hover {
+    &:hover,
+    &.pseudo-class-hover {
         border-bottom: 1px solid;
     }
 
-    &:visited {
+    &:visited,
+    &.pseudo-class-visited {
         color: var(--link-visited);
     }
 }

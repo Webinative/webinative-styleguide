@@ -1,3 +1,18 @@
+/*
+Textbox (UI states)
+
+Input textbox user-interaction states.
+
+Markup:
+<div class="m-ip-textbox">
+    <label class="m-ip-textbox__label" for="default">Full name</label>
+    <input class="m-ip-textbox__input {{modifier_class}}" type="text" id="default" name="full_name" placeholder="Placeholder text">
+</div>
+
+:focus - an element that received focus
+
+Styleguide Textbox.UIStates
+*/
 .m-ip-textbox {
     margin-block-end: 20px;
 
@@ -28,7 +43,8 @@
             color: var(--ip-placeholder-txt);
         }
 
-        &:focus {
+        &:focus,
+        &.pseudo-class-focus {
             border: 2px solid var(--light-blue);
             background-color: var(--body-bg);
         }
@@ -51,3 +67,33 @@
         color: var(--danger);
     }
 }
+
+/*
+Textbox (error)
+
+Input textbox error state.
+
+Markup:
+<div class="m-ip-textbox m-ip-textbox--has-error">
+    <label class="m-ip-textbox__label" for="error">Full name</label>
+    <p class="m-ip-textbox__help">How to correct this input</p>
+    <input class="m-ip-textbox__input" type="text" id="error" name="full_name" value="Normal text input">
+</div>
+
+Styleguide Textbox.Error
+*/
+
+/*
+Textbox (disabled)
+
+Input textbox disabled state.
+
+Markup:
+<div class="m-ip-textbox">
+    <label class="m-ip-textbox__label" for="disabled">Full name</label>
+    <input class="m-ip-textbox__input" type="text" id="disabled" name="full_name" placeholder="Disabled input"
+        disabled>
+</div>
+
+Styleguide Textbox.Disabled
+*/

@@ -1,8 +1,29 @@
+/*
+Tabs
+
+Group of tabs for switching content.
+
+Markup:
+<nav class="m-tab-group">
+    <a href="#" class="m-tab-group__link is-active">Inbox</a>
+    <a href="#" class="m-tab-group__link {{ modifier_class }}">Archives</a>
+    <a href="#" class="m-tab-group__link">Trash</a>
+</nav>
+
+:hover - mouse over state
+:focus - an element that received focus
+
+Styleguide Tabs
+*/
 .m-tab-group {
-    --tab-bg: #f4f4f4;
+    --tab-bg--hover: #f4f4f4;
     --tab-bg--active: #e7f6ff;
 
-    &:hover > &__link:not(.is-active) {
+    display: flex;
+    column-gap: 2px;
+
+    &:hover > &__link:not(.is-active),
+    &.pseudo-class-hover > &__link:not(.is-active) {
         border-color: transparent;
     }
 
@@ -11,13 +32,16 @@
         padding: 4px 10px;
         color: var(--body-txt) !important;
         border-radius: 6px;
+        flex-shrink: 0;
 
-        &:hover {
+        &:hover,
+        &.pseudo-class-hover {
             border: 2px solid transparent;
-            background-color: var(--tab-bg);
+            background-color: var(--tab-bg--hover);
         }
 
-        &:focus {
+        &:focus,
+        &.pseudo-class-focus {
             border: 2px solid var(--light-blue);
             outline: none;
         }
@@ -29,7 +53,7 @@
         }
 
         @media (prefers-color-scheme: dark) {
-            --tab-bg: #343434;
+            --tab-bg--hover: #343434;
             --tab-bg--active: #00486a;
 
             &.is-active {

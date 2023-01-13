@@ -1,3 +1,22 @@
+/*
+Messages (levels)
+
+Messages with different levels.
+
+Markup:
+<ul class="m-messages">
+    <li class="m-messages__item {{modifier_class}}">
+        <span class="m-messages__close-btn"></span>
+        <span class="m-messages__desc">This is a message</span>
+    </li>
+</ul>
+
+.m-messages__item--error - error message
+.m-messages__item--warning - warning message
+.m-messages__item--success - success message
+
+Styleguide Messages.Levels
+*/
 .m-messages {
     padding: 0;
     font-style: italic;
@@ -9,18 +28,18 @@
         margin-inline-end: 11px;
         margin-block-end: 20px;
         padding: 10px 15px;
-        color: var(--danger);
-        background-color: var(--danger-bg);
+        color: var(--info-txt);
+        background-color: var(--info-bg);
         border-radius: 8px;
+
+        &--error {
+            color: var(--danger);
+            background-color: var(--danger-bg);
+        }
 
         &--warning {
             color: var(--warning-txt);
             background-color: var(--warning-bg);
-        }
-
-        &--info {
-            color: var(--info-txt);
-            background-color: var(--info-bg);
         }
 
         &--success {
@@ -39,8 +58,9 @@
         background-size: 22px 22px;
         cursor: pointer;
 
-        &:hover {
-            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .5));
+        &:hover,
+        &.pseudo-class-hover {
+            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
         }
     }
 
@@ -50,3 +70,21 @@
         }
     }
 }
+
+/*
+Messages (UI states)
+
+Messages close button user-interaction state.
+
+Markup:
+<ul class="m-messages">
+    <li class="m-messages__item">
+        <span class="m-messages__close-btn {{modifier_class}}"></span>
+        <span class="m-messages__desc">This is an information</span>
+    </li>
+<ul>
+
+:hover - mouse over state
+
+Styleguide Messages.UIStates
+*/

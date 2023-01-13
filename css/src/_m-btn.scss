@@ -1,3 +1,22 @@
+/*
+Buttons (UI states)
+
+Buttons user-interaction states.
+
+Markup:
+<button class="m-btn {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--primary {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--secondary {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--danger {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--warning {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--large {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--compact {{modifier_class}}">Button</button>
+
+:hover - mouse over state
+:active - pressed state
+
+Styleguide Buttons.UIStates
+*/
 .m-btn {
     --white-txt: #ffffff;
     --btn-bg: #dedede;
@@ -13,12 +32,14 @@
     background-color: var(--btn-bg);
     border-radius: 6px;
 
-    &:hover {
+    &:hover,
+    &.pseudo-class-hover {
         background-color: var(--btn-bg--hover);
         box-shadow: 0px 4px 4px var(--btn-box-shadow--hover);
     }
 
-    &:active {
+    &:active,
+    &.pseudo-class-active {
         background-color: var(--btn-bg--active);
     }
 
@@ -113,3 +134,39 @@
         }
     }
 }
+
+/*
+Buttons (colors)
+
+Buttons with different colors.
+
+Markup:
+<button class="m-btn {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--large {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--compact {{modifier_class}}">Button</button>
+
+.m-btn--primary - primary button
+.m-btn--secondary - secondary button
+.m-btn--danger - danger button
+.m-btn--warning - warning button
+
+Styleguide Buttons.Colors
+*/
+
+/*
+Buttons (sizes)
+
+Buttons with different sizes.
+
+Markup:
+<button class="m-btn {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--primary {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--secondary {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--danger {{modifier_class}}">Button</button>
+<button class="m-btn m-btn--warning {{modifier_class}}">Button</button>
+
+.m-btn--large - large sized buttons
+.m-btn--compact - compact sized buttons
+
+Styleguide Buttons.Sizes
+*/
