@@ -58,6 +58,8 @@ Styleguide Textbox.UIStates
 
     &__help {
         margin-block: -2px 3px;
+        color: var(--ip-placeholder-txt);
+        font-style: italic;
     }
 
     &__error {
