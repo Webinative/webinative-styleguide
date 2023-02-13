@@ -58,14 +58,23 @@ Styleguide Textarea.UIStates
 
     &__help {
         margin-block: -2px 3px;
+        color: var(--ip-placeholder-txt);
+        font-style: italic;
+    }
+
+    &__error {
+        margin-block: 0px 3px;
+        color: var(--danger);
+    }
+
+    &__label + &__error {
+        // Usual order is label + help + error + input.
+        // Sometimes it is label + error + input
+        margin-block: -2px 3px;
     }
 
     &--has-error &__input {
         border: 2px solid var(--danger);
-    }
-
-    &--has-error &__help {
-        color: var(--danger);
     }
 }
 
