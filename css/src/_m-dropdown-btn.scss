@@ -22,11 +22,11 @@ Styleguide Buttons.Dropdown.1_Colors
 */
 
 .m-dropdown-btn {
-    --white-txt: #ffffff;
     --btn-bg: #dedede;
-    --btn-bg--hover: #e9e9e9;
-    --btn-bg--active: #c5c5c5;
-    --btn-box-shadow--hover: rgba(233, 233, 233, 0.4);
+    --btn-txt: var(--body-txt);
+    --btn-hover-box-shadow: rgba(233, 233, 233, 0.4);
+    --menu-border: #d9d9d9;
+
     --icon-width: 12px;
     --icon-height: 20px;
 
@@ -54,8 +54,6 @@ Styleguide Buttons.Dropdown.1_Colors
     }
 
     &__menu {
-        --menu-border: #d9d9d9;
-
         display: none;
         position: absolute;
         z-index: 2;
@@ -88,8 +86,8 @@ Styleguide Buttons.Dropdown.1_Colors
     &__trigger {
         &:hover,
         &.pseudo-class-hover {
-            background-color: var(--btn-bg--hover);
-            box-shadow: 0px 4px 4px var(--btn-box-shadow--hover);
+            --btn-bg: #e9e9e9;
+            box-shadow: 0px 4px 4px var(--btn-hover-box-shadow);
 
             &::after {
                 background-position: var(--chevron-background-position--hover);
@@ -97,17 +95,10 @@ Styleguide Buttons.Dropdown.1_Colors
         }
 
         &:active,
-        &.pseudo-class-active {
-            background-color: var(--btn-bg--active);
-
-            &::after {
-                background-position: var(--chevron-background-position--active);
-            }
-        }
-
+        &.pseudo-class-active,
         &:focus,
         &.pseudo-class-focus {
-            background-color: var(--btn-bg--active);
+            --btn-bg: #c5c5c5;
 
             &::after {
                 background-position: var(--chevron-background-position--active);
@@ -121,86 +112,109 @@ Styleguide Buttons.Dropdown.1_Colors
 
     &--primary {
         --btn-bg: #528245;
-        --btn-bg--hover: #79bd66;
-        --btn-bg--active: #35552c;
-        --btn-box-shadow--hover: rgba(121, 189, 102, 0.6);
+        --menu-border: #528245;
+        --btn-hover-box-shadow: rgba(121, 189, 102, 0.6);
         --chevron-background-position: -12px 0;
         --chevron-background-position--hover: -12px -20px;
         --chevron-background-position--active: -12px -40px;
 
         & .m-dropdown-btn__trigger {
             color: var(--white-txt);
-        }
 
-        & .m-dropdown-btn__menu {
-            --menu-border: #528245;
-        }
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #79bd66;
+            }
 
-        &::after {
-            background-position: -12px 0;
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #35552c;
+            }
         }
     }
 
     &--secondary {
         --btn-bg: #4f7c8e;
-        --btn-bg--hover: #8bb5c5;
-        --btn-bg--active: #3b5d6b;
-        --btn-box-shadow--hover: rgba(139, 181, 197, 0.6);
+        --menu-border: #4f7c8e;
+        --btn-hover-box-shadow : rgba(139, 181, 197, 0.6);
         --chevron-background-position: -12px 0;
         --chevron-background-position--hover: -12px -20px;
         --chevron-background-position--active: -12px -40px;
 
         & .m-dropdown-btn__trigger {
             color: var(--white-txt);
-        }
 
-        & .m-dropdown-btn__menu {
-            --menu-border: #4f7c8e;
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #8bb5c5;
+            }
+
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #3b5d6b;
+            }
         }
     }
 
-
     &--danger {
         --btn-bg: #af2e3d;
-        --btn-bg--hover: #e46d7b;
-        --btn-bg--active: #84222e;
-        --btn-box-shadow--hover: rgba(228, 109, 123, 0.6);
+        --menu-border: #af2e3d;
+        --btn-hover-box-shadow: rgba(228, 109, 123, 0.6);
         --chevron-background-position: -12px 0;
         --chevron-background-position--hover: -12px -20px;
         --chevron-background-position--active: -12px -40px;
 
         & .m-dropdown-btn__trigger {
             color: var(--white-txt);
-        }
 
-        & .m-dropdown-btn__menu {
-            --menu-border: #af2e3d;
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #e46d7b;
+            }
+
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #84222e;
+            }
         }
     }
 
     &--warning {
         --btn-bg: #c18d0a;
-        --btn-bg--hover: #f4c54d;
-        --btn-bg--active: #916a08;
-        --btn-box-shadow--hover: rgba(244, 197, 77, 0.6);
+        --menu-border: #c18d0a;
+        --btn-hover-box-shadow: rgba(244, 197, 77, 0.6);
         --chevron-background-position: -12px 0;
         --chevron-background-position--hover: -12px -20px;
         --chevron-background-position--active: -12px -40px;
 
         & .m-dropdown-btn__trigger {
             color: var(--white-txt);
-        }
 
-        & .m-dropdown-btn__menu {
-            --menu-border: #c18d0a;
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #f4c54d;
+            }
+
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #916a08;
+            }
         }
     }
 
-    &--large {
+    &--large .m-dropdown-btn__trigger {
         padding: 15px 20px;
     }
 
-    &--compact {
+    &--compact .m-dropdown-btn__trigger{
         padding: 5px 15px;
     }
 }
@@ -210,85 +224,111 @@ Styleguide Buttons.Dropdown.1_Colors
         --btn-bg: #3c3c3c;
         --btn-bg--hover: #505050;
         --btn-bg--active: #323232;
-        --btn-box-shadow--hover: rgba(92, 92, 92, 0.4);
+        --menu-border: #3c3c3c;
+        --btn-hover-box-shadow: rgba(92, 92, 92, 0.4);
 
         &__trigger {
-                color: var(--body-txt);
-        }
-
-        &__trigger + .m-dropdown-btn__menu{
-            --menu-border: #3c3c3c;
+            color: var(--body-txt);
         }
 
         &--primary {
             --btn-bg: #528245;
-            --btn-bg--hover: #79bd66;
-            --btn-bg--active: #35552c;
-            --btn-box-shadow--hover: rgba(77, 121, 65, 0.6);
+            --menu-border: #528245;
+            --btn-hover-box-shadow: rgba(77, 121, 65, 0.6);
             --chevron-background-position: -12px 0;
             --chevron-background-position--hover: -12px -20px;
             --chevron-background-position--active: -12px -40px;
 
             & .m-dropdown-btn__trigger {
                 color: var(--white-txt);
-            }
 
-            & .m-dropdown-btn__menu {
-                --menu-border: #528245;
+                &:hover,
+                &.pseudo-class-hover {
+                    --btn-bg: #79bd66;
+                }
+
+                &:active,
+                &.pseudo-class-active,
+                &:focus,
+                &.pseudo-class-focus {
+                    --btn-bg: #35552c;
+                }
             }
         }
 
         &--secondary {
             --btn-bg: #4f7c8e;
-            --btn-bg--hover: #8bb5c5;
-            --btn-bg--active: #3b5d6b;
-            --btn-box-shadow--hover: rgba(82, 107, 117, 0.6);
+            --menu-border: #4f7c8e;
+            --btn-hover-box-shadow: rgba(82, 107, 117, 0.6);
             --chevron-background-position: -12px 0;
             --chevron-background-position--hover: -12px -20px;
             --chevron-background-position--active: -12px -40px;
 
             & .m-dropdown-btn__trigger {
                 color: var(--white-txt);
-            }
 
-            & .m-dropdown-btn__menu {
-                --menu-border: #4f7c8e;
+                &:hover,
+                &.pseudo-class-hover {
+                    --btn-bg: #8bb5c5;
+                }
+
+                &:active,
+                &.pseudo-class-active,
+                &:focus,
+                &.pseudo-class-focus {
+                    --btn-bg: #3b5d6b;
+                }
             }
         }
 
         &--danger {
             --btn-bg: #af2e3d;
-            --btn-bg--hover: #e46d7b;
-            --btn-bg--active: #84222e;
-            --btn-box-shadow--hover: rgba(138, 64, 73, 0.6);
+            --menu-border: #af2e3d;
+            --btn-hover-box-shadow: rgba(138, 64, 73, 0.6);
             --chevron-background-position: -12px 0;
             --chevron-background-position--hover: -12px -20px;
             --chevron-background-position--active: -12px -40px;
 
             & .m-dropdown-btn__trigger {
                 color: var(--white-txt);
+
+                &:hover,
+                &.pseudo-class-hover {
+                    --btn-bg: #e46d7b;
+                }
+
+                &:active,
+                &.pseudo-class-active,
+                &:focus,
+                &.pseudo-class-focus {
+                    --btn-bg: #84222e;
+                }
             }
 
-            & .m-dropdown-btn__menu {
-                --menu-border: #af2e3d;
-            }
         }
 
         &--warning {
             --btn-bg: #c18d0a;
-            --btn-bg--hover: #f4c54d;
-            --btn-bg--active: #916a08;
-            --btn-box-shadow--hover: rgba(125, 101, 38, 0.6);
+            --menu-border: #c18d0a;
+            --btn-hover-box-shadow: rgba(125, 101, 38, 0.6);
             --chevron-background-position: -12px 0;
             --chevron-background-position--hover: -12px -20px;
             --chevron-background-position--active: -12px -40px;
 
             & .m-dropdown-btn__trigger {
                 color: var(--white-txt);
-            }
 
-            & .m-dropdown-btn__menu {
-                --menu-border: #c18d0a;
+                &:hover,
+                &.pseudo-class-hover {
+                    --btn-bg: #f4c54d;
+                }
+
+                &:active,
+                &.pseudo-class-active,
+                &:focus,
+                &.pseudo-class-focus {
+                    --btn-bg: #916a08;
+                }
             }
         }
     }
@@ -330,8 +370,8 @@ Dropdown Button (UI states)
 Dropdown Button with UI states.
 
 Markup:
-<div class="m-dropdown-btn {{modifier_class}}">
-    <button class="m-dropdown-btn__trigger">Button</button>
+<div class="m-dropdown-btn ">
+    <button class="m-dropdown-btn__trigger {{modifier_class}}">Button</button>
     <div class="m-dropdown-btn__menu">
         <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
@@ -339,8 +379,8 @@ Markup:
     </div>
 </div>
 
-<div class="m-dropdown-btn m-dropdown-btn--primary {{modifier_class}}">
-    <button class="m-dropdown-btn__trigger">Button</button>
+<div class="m-dropdown-btn m-dropdown-btn--primary">
+    <button class="m-dropdown-btn__trigger {{modifier_class}}">Button</button>
     <div class="m-dropdown-btn__menu">
         <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
