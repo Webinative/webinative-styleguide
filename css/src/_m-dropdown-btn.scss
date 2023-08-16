@@ -29,6 +29,7 @@ Styleguide Buttons.Dropdown.1_Colors
 
     --icon-width: 12px;
     --icon-height: 20px;
+    --chevron-background-position: 0;
 
     &__trigger {
         margin: 0;
@@ -90,7 +91,7 @@ Styleguide Buttons.Dropdown.1_Colors
             box-shadow: 0px 4px 4px var(--btn-hover-box-shadow);
 
             &::after {
-                background-position: var(--chevron-background-position--hover);
+                --chevron-background-position: 0 -20px;
             }
         }
 
@@ -101,7 +102,7 @@ Styleguide Buttons.Dropdown.1_Colors
             --btn-bg: #c5c5c5;
 
             &::after {
-                background-position: var(--chevron-background-position--active);
+                --chevron-background-position: 0 -40px;
             }
         }
 
@@ -115,8 +116,6 @@ Styleguide Buttons.Dropdown.1_Colors
         --menu-border: #528245;
         --btn-hover-box-shadow: rgba(121, 189, 102, 0.6);
         --chevron-background-position: -12px 0;
-        --chevron-background-position--hover: -12px -20px;
-        --chevron-background-position--active: -12px -40px;
 
         & .m-dropdown-btn__trigger {
             color: var(--white-txt);
@@ -124,6 +123,10 @@ Styleguide Buttons.Dropdown.1_Colors
             &:hover,
             &.pseudo-class-hover {
                 --btn-bg: #79bd66;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
             }
 
             &:active,
@@ -131,6 +134,10 @@ Styleguide Buttons.Dropdown.1_Colors
             &:focus,
             &.pseudo-class-focus {
                 --btn-bg: #35552c;
+
+                &::after{
+                    --chevron-background-position: -12px -40px;
+                }
             }
         }
     }
@@ -140,8 +147,6 @@ Styleguide Buttons.Dropdown.1_Colors
         --menu-border: #4f7c8e;
         --btn-hover-box-shadow : rgba(139, 181, 197, 0.6);
         --chevron-background-position: -12px 0;
-        --chevron-background-position--hover: -12px -20px;
-        --chevron-background-position--active: -12px -40px;
 
         & .m-dropdown-btn__trigger {
             color: var(--white-txt);
@@ -149,6 +154,10 @@ Styleguide Buttons.Dropdown.1_Colors
             &:hover,
             &.pseudo-class-hover {
                 --btn-bg: #8bb5c5;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
             }
 
             &:active,
@@ -156,6 +165,10 @@ Styleguide Buttons.Dropdown.1_Colors
             &:focus,
             &.pseudo-class-focus {
                 --btn-bg: #3b5d6b;
+
+                &::after{
+                    --chevron-background-position: -12px -40px;
+                }
             }
         }
     }
@@ -165,8 +178,6 @@ Styleguide Buttons.Dropdown.1_Colors
         --menu-border: #af2e3d;
         --btn-hover-box-shadow: rgba(228, 109, 123, 0.6);
         --chevron-background-position: -12px 0;
-        --chevron-background-position--hover: -12px -20px;
-        --chevron-background-position--active: -12px -40px;
 
         & .m-dropdown-btn__trigger {
             color: var(--white-txt);
@@ -174,6 +185,10 @@ Styleguide Buttons.Dropdown.1_Colors
             &:hover,
             &.pseudo-class-hover {
                 --btn-bg: #e46d7b;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
             }
 
             &:active,
@@ -181,6 +196,10 @@ Styleguide Buttons.Dropdown.1_Colors
             &:focus,
             &.pseudo-class-focus {
                 --btn-bg: #84222e;
+
+                &::after{
+                    --chevron-background-position: -12px -40px;
+                }
             }
         }
     }
@@ -190,8 +209,6 @@ Styleguide Buttons.Dropdown.1_Colors
         --menu-border: #c18d0a;
         --btn-hover-box-shadow: rgba(244, 197, 77, 0.6);
         --chevron-background-position: -12px 0;
-        --chevron-background-position--hover: -12px -20px;
-        --chevron-background-position--active: -12px -40px;
 
         & .m-dropdown-btn__trigger {
             color: var(--white-txt);
@@ -199,6 +216,10 @@ Styleguide Buttons.Dropdown.1_Colors
             &:hover,
             &.pseudo-class-hover {
                 --btn-bg: #f4c54d;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
             }
 
             &:active,
@@ -206,6 +227,10 @@ Styleguide Buttons.Dropdown.1_Colors
             &:focus,
             &.pseudo-class-focus {
                 --btn-bg: #916a08;
+
+                &::after{
+                    --chevron-background-position: -12px -40px;
+                }
             }
         }
     }
@@ -222,22 +247,38 @@ Styleguide Buttons.Dropdown.1_Colors
 @media (prefers-color-scheme: dark) {
     .m-dropdown-btn {
         --btn-bg: #3c3c3c;
-        --btn-bg--hover: #505050;
-        --btn-bg--active: #323232;
         --menu-border: #3c3c3c;
         --btn-hover-box-shadow: rgba(92, 92, 92, 0.4);
+        --chevron-background-position: -12px 0;
 
         &__trigger {
             color: var(--body-txt);
+
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #505050;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
+            }
+
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #323232;
+
+                &::after {
+                    --chevron-background-position: -12px -40px;
+                }
+            }
         }
 
         &--primary {
             --btn-bg: #528245;
             --menu-border: #528245;
             --btn-hover-box-shadow: rgba(77, 121, 65, 0.6);
-            --chevron-background-position: -12px 0;
-            --chevron-background-position--hover: -12px -20px;
-            --chevron-background-position--active: -12px -40px;
 
             & .m-dropdown-btn__trigger {
                 color: var(--white-txt);
@@ -260,9 +301,6 @@ Styleguide Buttons.Dropdown.1_Colors
             --btn-bg: #4f7c8e;
             --menu-border: #4f7c8e;
             --btn-hover-box-shadow: rgba(82, 107, 117, 0.6);
-            --chevron-background-position: -12px 0;
-            --chevron-background-position--hover: -12px -20px;
-            --chevron-background-position--active: -12px -40px;
 
             & .m-dropdown-btn__trigger {
                 color: var(--white-txt);
@@ -285,9 +323,6 @@ Styleguide Buttons.Dropdown.1_Colors
             --btn-bg: #af2e3d;
             --menu-border: #af2e3d;
             --btn-hover-box-shadow: rgba(138, 64, 73, 0.6);
-            --chevron-background-position: -12px 0;
-            --chevron-background-position--hover: -12px -20px;
-            --chevron-background-position--active: -12px -40px;
 
             & .m-dropdown-btn__trigger {
                 color: var(--white-txt);
@@ -311,9 +346,6 @@ Styleguide Buttons.Dropdown.1_Colors
             --btn-bg: #c18d0a;
             --menu-border: #c18d0a;
             --btn-hover-box-shadow: rgba(125, 101, 38, 0.6);
-            --chevron-background-position: -12px 0;
-            --chevron-background-position--hover: -12px -20px;
-            --chevron-background-position--active: -12px -40px;
 
             & .m-dropdown-btn__trigger {
                 color: var(--white-txt);
