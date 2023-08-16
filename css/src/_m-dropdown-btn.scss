@@ -1,10 +1,10 @@
 /*
-Buttons (Dropdown)
+Dropdown Button (Colors)
 
-Dropdown Button.
+Dropdown Button with color variants.
 
 Markup:
-<div class="m-dropdown-btn">
+<div class="m-dropdown-btn {{modifier_class}}">
     <button class="m-dropdown-btn__trigger">Button</button>
     <div class="m-dropdown-btn__menu">
         <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
@@ -12,80 +12,25 @@ Markup:
         <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
     </div>
 </div>
-<br>
-<div class="m-dropdown-btn">
-    <button class="m-dropdown-btn__trigger m-dropdown-btn--primary {{modifier_class}}">Button</button>
-    <div class="m-dropdown-btn__menu">
-        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
-    </div>
-</div>
-<br>
-<div class="m-dropdown-btn">
-    <button class="m-dropdown-btn__trigger m-dropdown-btn--secondary {{modifier_class}}">Button</button>
-    <div class="m-dropdown-btn__menu">
-        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
-    </div>
-</div>
-<br>
-<div class="m-dropdown-btn">
-    <button class="m-dropdown-btn__trigger m-dropdown-btn--danger {{modifier_class}}">Button</button>
-    <div class="m-dropdown-btn__menu">
-        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
-    </div>
-</div>
-<br>
-<div class="m-dropdown-btn">
-    <button class="m-dropdown-btn__trigger m-dropdown-btn--warning {{modifier_class}}">Button</button>
-    <div class="m-dropdown-btn__menu">
-        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
-    </div>
-</div>
-<br>
-<div class="m-dropdown-btn">
-    <button class="m-dropdown-btn__trigger m-dropdown-btn--large {{modifier_class}}">Button</button>
-    <div class="m-dropdown-btn__menu">
-        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
-    </div>
-</div>
-<br>
-<div class="m-dropdown-btn">
-    <button class="m-dropdown-btn__trigger m-dropdown-btn--compact {{modifier_class}}">Button</button>
-    <div class="m-dropdown-btn__menu">
-        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
-        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
-    </div>
-</div>
 
-:hover - mouse over state
-:active - pressed state
+.m-dropdown-btn--primary - Primary color variant
+.m-dropdown-btn--secondary - Secondary color variant
+.m-dropdown-btn--danger - Danger color variant
+.m-dropdown-btn--warning - Warning color variant
 
-Styleguide Buttons.Dropdown
+Styleguide Buttons.Dropdown.1_Colors
 */
 
 .m-dropdown-btn {
-    &__trigger {
-        --white-txt: #ffffff;
-        --btn-bg: #dedede;
-        --btn-bg--hover: #e9e9e9;
-        --btn-bg--active: #c5c5c5;
-        --btn-box-shadow--hover: rgba(233, 233, 233, 0.4);
-        --icon-width: 12px;
-        --icon-height: 20px;
-        --chevron-background-position: 0;
-        --chevron-background-position--hover: 0 -20px;
-        --chevron-background-position--active:0 -40px;
+    --white-txt: #ffffff;
+    --btn-bg: #dedede;
+    --btn-bg--hover: #e9e9e9;
+    --btn-bg--active: #c5c5c5;
+    --btn-box-shadow--hover: rgba(233, 233, 233, 0.4);
+    --icon-width: 12px;
+    --icon-height: 20px;
 
+    &__trigger {
         margin: 0;
         border: none;
         padding: 10px 15px;
@@ -183,15 +128,17 @@ Styleguide Buttons.Dropdown
         --chevron-background-position--hover: -12px -20px;
         --chevron-background-position--active: -12px -40px;
 
-        color: var(--white-txt);
+        & .m-dropdown-btn__trigger {
+            color: var(--white-txt);
+        }
+
+        & .m-dropdown-btn__menu {
+            --menu-border: #528245;
+        }
 
         &::after {
             background-position: -12px 0;
         }
-    }
-
-    &__trigger.m-dropdown-btn--primary + .m-dropdown-btn__menu{
-        --menu-border: #528245;
     }
 
     &--secondary {
@@ -203,12 +150,15 @@ Styleguide Buttons.Dropdown
         --chevron-background-position--hover: -12px -20px;
         --chevron-background-position--active: -12px -40px;
 
-        color: var(--white-txt);
+        & .m-dropdown-btn__trigger {
+            color: var(--white-txt);
+        }
+
+        & .m-dropdown-btn__menu {
+            --menu-border: #4f7c8e;
+        }
     }
 
-    &__trigger.m-dropdown-btn--secondary + .m-dropdown-btn__menu{
-        --menu-border: #4f7c8e;
-    }
 
     &--danger {
         --btn-bg: #af2e3d;
@@ -219,11 +169,13 @@ Styleguide Buttons.Dropdown
         --chevron-background-position--hover: -12px -20px;
         --chevron-background-position--active: -12px -40px;
 
-        color: var(--white-txt);
-    }
+        & .m-dropdown-btn__trigger {
+            color: var(--white-txt);
+        }
 
-    &__trigger.m-dropdown-btn--danger + .m-dropdown-btn__menu{
-        --menu-border: #af2e3d;
+        & .m-dropdown-btn__menu {
+            --menu-border: #af2e3d;
+        }
     }
 
     &--warning {
@@ -235,11 +187,13 @@ Styleguide Buttons.Dropdown
         --chevron-background-position--hover: -12px -20px;
         --chevron-background-position--active: -12px -40px;
 
-        color: var(--white-txt);
-    }
+        & .m-dropdown-btn__trigger {
+            color: var(--white-txt);
+        }
 
-    &__trigger.m-dropdown-btn--warning + .m-dropdown-btn__menu{
-        --menu-border: #c18d0a;
+        & .m-dropdown-btn__menu {
+            --menu-border: #c18d0a;
+        }
     }
 
     &--large {
@@ -253,15 +207,12 @@ Styleguide Buttons.Dropdown
 
 @media (prefers-color-scheme: dark) {
     .m-dropdown-btn {
-        &__trigger {
-            --btn-bg: #3c3c3c;
-            --btn-bg--hover: #505050;
-            --btn-bg--active: #323232;
-            --btn-box-shadow--hover: rgba(92, 92, 92, 0.4);
-            --chevron-background-position: -12px 0;
-            --chevron-background-position--hover: -12px -20px;
-            --chevron-background-position--active: -12px -40px;
+        --btn-bg: #3c3c3c;
+        --btn-bg--hover: #505050;
+        --btn-bg--active: #323232;
+        --btn-box-shadow--hover: rgba(92, 92, 92, 0.4);
 
+        &__trigger {
                 color: var(--body-txt);
         }
 
@@ -278,11 +229,13 @@ Styleguide Buttons.Dropdown
             --chevron-background-position--hover: -12px -20px;
             --chevron-background-position--active: -12px -40px;
 
-            color: var(--white-txt);
-        }
+            & .m-dropdown-btn__trigger {
+                color: var(--white-txt);
+            }
 
-        &__trigger.m-dropdown-btn--primary + .m-dropdown-btn__menu{
-            --menu-border: #528245;
+            & .m-dropdown-btn__menu {
+                --menu-border: #528245;
+            }
         }
 
         &--secondary {
@@ -294,11 +247,13 @@ Styleguide Buttons.Dropdown
             --chevron-background-position--hover: -12px -20px;
             --chevron-background-position--active: -12px -40px;
 
-            color: var(--white-txt);
-        }
+            & .m-dropdown-btn__trigger {
+                color: var(--white-txt);
+            }
 
-        &__trigger.m-dropdown-btn--secondary + .m-dropdown-btn__menu{
-            --menu-border: #4f7c8e;
+            & .m-dropdown-btn__menu {
+                --menu-border: #4f7c8e;
+            }
         }
 
         &--danger {
@@ -310,11 +265,13 @@ Styleguide Buttons.Dropdown
             --chevron-background-position--hover: -12px -20px;
             --chevron-background-position--active: -12px -40px;
 
-            color: var(--white-txt);
-        }
+            & .m-dropdown-btn__trigger {
+                color: var(--white-txt);
+            }
 
-        &__trigger.m-dropdown-btn--danger + .m-dropdown-btn__menu{
-            --menu-border: #af2e3d;
+            & .m-dropdown-btn__menu {
+                --menu-border: #af2e3d;
+            }
         }
 
         &--warning {
@@ -326,12 +283,73 @@ Styleguide Buttons.Dropdown
             --chevron-background-position--hover: -12px -20px;
             --chevron-background-position--active: -12px -40px;
 
-            color: var(--white-txt);
-        }
+            & .m-dropdown-btn__trigger {
+                color: var(--white-txt);
+            }
 
-        &__trigger.m-dropdown-btn--warning + .m-dropdown-btn__menu{
-            --menu-border: #c18d0a;
+            & .m-dropdown-btn__menu {
+                --menu-border: #c18d0a;
+            }
         }
     }
 }
 
+/*
+Dropdown Button (Sizes)
+
+Dropdown Button with size variants.
+
+Markup:
+<div class="m-dropdown-btn {{modifier_class}}">
+    <button class="m-dropdown-btn__trigger">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</div>
+<br>
+<div class="m-dropdown-btn m-dropdown-btn--primary {{modifier_class}}">
+    <button class="m-dropdown-btn__trigger">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</div>
+
+.m-dropdown-btn--large - Large size variant
+.m-dropdown-btn--compact - Compact size variant
+
+Styleguide Buttons.Dropdown.2_Sizes
+*/
+
+/*
+Dropdown Button (UI states)
+
+Dropdown Button with UI states.
+
+Markup:
+<div class="m-dropdown-btn {{modifier_class}}">
+    <button class="m-dropdown-btn__trigger">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</div>
+
+<div class="m-dropdown-btn m-dropdown-btn--primary {{modifier_class}}">
+    <button class="m-dropdown-btn__trigger">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</div>
+
+:hover - Mouse over state
+:active - Button pressed state
+
+Styleguide Buttons.Dropdown.3_UIStates
+*/
