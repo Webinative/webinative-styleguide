@@ -1,0 +1,419 @@
+/*
+Dropdown Button (Colors)
+
+Dropdown Button with color variants.
+
+Markup:
+<div class="m-dropdown-btn {{modifier_class}}">
+    <button class="m-dropdown-btn__trigger">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</div>
+
+.m-dropdown-btn--primary - Primary color variant
+.m-dropdown-btn--secondary - Secondary color variant
+.m-dropdown-btn--danger - Danger color variant
+.m-dropdown-btn--warning - Warning color variant
+
+Styleguide Buttons.Dropdown.1_Colors
+*/
+
+.m-dropdown-btn {
+    --btn-bg: #dedede;
+    --btn-txt: #494949;
+    --btn-hover-box-shadow: rgba(233, 233, 233, 0.4);
+    --menu-border: #d9d9d9;
+
+    --icon-width: 12px;
+    --icon-height: 20px;
+    --chevron-background-position: 0;
+
+    &__trigger {
+        margin: 0;
+        border: none;
+        padding: 10px 15px;
+        color: var(--btn-txt);
+        font-weight: bold;
+        background-color: var(--btn-bg);
+        border-radius: 6px;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: var(--icon-width);
+            height: var(--icon-height);
+            margin-inline-start: 10px;
+            vertical-align: middle;
+            background-image: url('../wicons/sprite-btn-chevron.svg');
+            background-repeat: no-repeat;
+            background-position: var(--chevron-background-position);
+            background-size: calc(2 * (--icon-width)) calc(3 * var(--icon-height));
+        }
+    }
+
+    &__menu {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        min-width: 189px;
+        margin-block-start: 4px;
+        border: 2px solid var(--menu-border);
+        padding-block: 6px;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+        &-link {
+            display: block;
+            border-bottom: none;
+            padding: 5px 13px;
+            color: var(--body-txt);
+            text-decoration: none;
+
+            &:nth-child(even) {
+                background-color: #f1f1f1;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: var(--light-blue);
+            }
+        }
+    }
+
+    &__trigger {
+        &:hover,
+        &.pseudo-class-hover {
+            --btn-bg: #e9e9e9;
+            box-shadow: 0px 4px 4px var(--btn-hover-box-shadow);
+
+            &::after {
+                --chevron-background-position: 0 -20px;
+            }
+        }
+
+        &:active,
+        &.pseudo-class-active,
+        &:focus,
+        &.pseudo-class-focus {
+            --btn-bg: #c5c5c5;
+
+            &::after {
+                --chevron-background-position: 0 -40px;
+            }
+        }
+
+        &:focus + .m-dropdown-btn__menu {
+            display: block;
+        }
+    }
+
+    &--primary {
+        --btn-bg: #528245;
+        --btn-txt: #fff;
+        --menu-border: #528245;
+        --btn-hover-box-shadow: rgba(121, 189, 102, 0.6);
+        --chevron-background-position: -12px 0;
+
+        .m-dropdown-btn__trigger {
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #79bd66;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
+            }
+
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #35552c;
+
+                &::after{
+                    --chevron-background-position: -12px -40px;
+                }
+            }
+        }
+    }
+
+    &--secondary {
+        --btn-bg: #4f7c8e;
+        --btn-txt: #fff;
+        --menu-border: #4f7c8e;
+        --btn-hover-box-shadow : rgba(139, 181, 197, 0.6);
+        --chevron-background-position: -12px 0;
+
+        .m-dropdown-btn__trigger {
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #8bb5c5;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
+            }
+
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #3b5d6b;
+
+                &::after{
+                    --chevron-background-position: -12px -40px;
+                }
+            }
+        }
+    }
+
+    &--danger {
+        --btn-bg: #af2e3d;
+        --btn-txt: #fff;
+        --menu-border: #af2e3d;
+        --btn-hover-box-shadow: rgba(228, 109, 123, 0.6);
+        --chevron-background-position: -12px 0;
+
+        .m-dropdown-btn__trigger {
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #e46d7b;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
+            }
+
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #84222e;
+
+                &::after{
+                    --chevron-background-position: -12px -40px;
+                }
+            }
+        }
+    }
+
+    &--warning {
+        --btn-bg: #c18d0a;
+        --btn-txt: #fff;
+        --menu-border: #c18d0a;
+        --btn-hover-box-shadow: rgba(244, 197, 77, 0.6);
+        --chevron-background-position: -12px 0;
+
+        .m-dropdown-btn__trigger {
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #f4c54d;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
+            }
+
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #916a08;
+
+                &::after{
+                    --chevron-background-position: -12px -40px;
+                }
+            }
+        }
+    }
+
+    &--large .m-dropdown-btn__trigger {
+        padding: 15px 20px;
+    }
+
+    &--compact .m-dropdown-btn__trigger{
+        padding: 5px 15px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .m-dropdown-btn {
+        --btn-bg: #3c3c3c;
+        --btn-txt: #dbdbdb;
+        --menu-border: #3c3c3c;
+        --btn-hover-box-shadow: rgba(92, 92, 92, 0.4);
+        --chevron-background-position: -12px 0;
+
+        &__trigger {
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #505050;
+
+                &::after {
+                    --chevron-background-position: -12px -20px;
+                }
+            }
+
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #323232;
+
+                &::after {
+                    --chevron-background-position: -12px -40px;
+                }
+            }
+        }
+
+        &--primary {
+            --btn-bg: #528245;
+            --btn-txt: #fff;
+            --menu-border: #528245;
+            --btn-hover-box-shadow: rgba(77, 121, 65, 0.6);
+
+            .m-dropdown-btn__trigger {
+                &:hover,
+                &.pseudo-class-hover {
+                    --btn-bg: #79bd66;
+                }
+
+                &:active,
+                &.pseudo-class-active,
+                &:focus,
+                &.pseudo-class-focus {
+                    --btn-bg: #35552c;
+                }
+            }
+        }
+
+        &--secondary {
+            --btn-bg: #4f7c8e;
+            --btn-txt: #fff;
+            --menu-border: #4f7c8e;
+            --btn-hover-box-shadow: rgba(82, 107, 117, 0.6);
+
+            .m-dropdown-btn__trigger {
+                &:hover,
+                &.pseudo-class-hover {
+                    --btn-bg: #8bb5c5;
+                }
+
+                &:active,
+                &.pseudo-class-active,
+                &:focus,
+                &.pseudo-class-focus {
+                    --btn-bg: #3b5d6b;
+                }
+            }
+        }
+
+        &--danger {
+            --btn-bg: #af2e3d;
+            --btn-txt: #fff;
+            --menu-border: #af2e3d;
+            --btn-hover-box-shadow: rgba(138, 64, 73, 0.6);
+
+            .m-dropdown-btn__trigger {
+                &:hover,
+                &.pseudo-class-hover {
+                    --btn-bg: #e46d7b;
+                }
+
+                &:active,
+                &.pseudo-class-active,
+                &:focus,
+                &.pseudo-class-focus {
+                    --btn-bg: #84222e;
+                }
+            }
+
+        }
+
+        &--warning {
+            --btn-bg: #c18d0a;
+            --btn-txt: #fff;
+            --menu-border: #c18d0a;
+            --btn-hover-box-shadow: rgba(125, 101, 38, 0.6);
+
+            .m-dropdown-btn__trigger {
+
+                &:hover,
+                &.pseudo-class-hover {
+                    --btn-bg: #f4c54d;
+                }
+
+                &:active,
+                &.pseudo-class-active,
+                &:focus,
+                &.pseudo-class-focus {
+                    --btn-bg: #916a08;
+                }
+            }
+        }
+    }
+}
+
+/*
+Dropdown Button (Sizes)
+
+Dropdown Button with size variants.
+
+Markup:
+<div class="m-dropdown-btn {{modifier_class}}">
+    <button class="m-dropdown-btn__trigger">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</div>
+<br>
+<div class="m-dropdown-btn m-dropdown-btn--primary {{modifier_class}}">
+    <button class="m-dropdown-btn__trigger">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</div>
+
+.m-dropdown-btn--large - Large size variant
+.m-dropdown-btn--compact - Compact size variant
+
+Styleguide Buttons.Dropdown.2_Sizes
+*/
+
+/*
+Dropdown Button (UI states)
+
+Dropdown Button with UI states.
+
+Markup:
+<div class="m-dropdown-btn ">
+    <button class="m-dropdown-btn__trigger {{modifier_class}}">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</div>
+
+<div class="m-dropdown-btn m-dropdown-btn--primary">
+    <button class="m-dropdown-btn__trigger {{modifier_class}}">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</div>
+
+:hover - Mouse over state
+:active - Button pressed state
+
+Styleguide Buttons.Dropdown.3_UIStates
+*/
