@@ -4,14 +4,14 @@ Dropdown Button (Colors)
 Dropdown Button with color variants.
 
 Markup:
-<div class="m-dropdown-btn {{modifier_class}}">
+<span class="m-dropdown-btn {{modifier_class}}">
     <button class="m-dropdown-btn__trigger">Button</button>
     <div class="m-dropdown-btn__menu">
         <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
     </div>
-</div>
+</span>
 
 .m-dropdown-btn--primary - Primary color variant
 .m-dropdown-btn--secondary - Secondary color variant
@@ -30,6 +30,8 @@ Styleguide Buttons.Dropdown.1_Colors
     --icon-width: 12px;
     --icon-height: 20px;
     --chevron-background-position: 0;
+
+    position: relative;
 
     &__trigger {
         margin: 0;
@@ -117,26 +119,26 @@ Styleguide Buttons.Dropdown.1_Colors
         --menu-border: #528245;
         --btn-hover-box-shadow: rgba(121, 189, 102, 0.6);
         --chevron-background-position: -12px 0;
+    }
 
-        .m-dropdown-btn__trigger {
-            &:hover,
-            &.pseudo-class-hover {
-                --btn-bg: #79bd66;
+    &--primary &__trigger {
+        &:hover,
+        &.pseudo-class-hover {
+            --btn-bg: #79bd66;
 
-                &::after {
-                    --chevron-background-position: -12px -20px;
-                }
+            &::after {
+                --chevron-background-position: -12px -20px;
             }
+        }
 
-            &:active,
-            &.pseudo-class-active,
-            &:focus,
-            &.pseudo-class-focus {
-                --btn-bg: #35552c;
+        &:active,
+        &.pseudo-class-active,
+        &:focus,
+        &.pseudo-class-focus {
+            --btn-bg: #35552c;
 
-                &::after{
-                    --chevron-background-position: -12px -40px;
-                }
+            &::after{
+                --chevron-background-position: -12px -40px;
             }
         }
     }
@@ -147,26 +149,26 @@ Styleguide Buttons.Dropdown.1_Colors
         --menu-border: #4f7c8e;
         --btn-hover-box-shadow : rgba(139, 181, 197, 0.6);
         --chevron-background-position: -12px 0;
+    }
 
-        .m-dropdown-btn__trigger {
-            &:hover,
-            &.pseudo-class-hover {
-                --btn-bg: #8bb5c5;
+    &--secondary &__trigger {
+        &:hover,
+        &.pseudo-class-hover {
+            --btn-bg: #8bb5c5;
 
-                &::after {
-                    --chevron-background-position: -12px -20px;
-                }
+            &::after {
+                --chevron-background-position: -12px -20px;
             }
+        }
 
-            &:active,
-            &.pseudo-class-active,
-            &:focus,
-            &.pseudo-class-focus {
-                --btn-bg: #3b5d6b;
+        &:active,
+        &.pseudo-class-active,
+        &:focus,
+        &.pseudo-class-focus {
+            --btn-bg: #3b5d6b;
 
-                &::after{
-                    --chevron-background-position: -12px -40px;
-                }
+            &::after{
+                --chevron-background-position: -12px -40px;
             }
         }
     }
@@ -177,26 +179,26 @@ Styleguide Buttons.Dropdown.1_Colors
         --menu-border: #af2e3d;
         --btn-hover-box-shadow: rgba(228, 109, 123, 0.6);
         --chevron-background-position: -12px 0;
+    }
 
-        .m-dropdown-btn__trigger {
-            &:hover,
-            &.pseudo-class-hover {
-                --btn-bg: #e46d7b;
+    &--danger &__trigger {
+        &:hover,
+        &.pseudo-class-hover {
+            --btn-bg: #e46d7b;
 
-                &::after {
-                    --chevron-background-position: -12px -20px;
-                }
+            &::after {
+                --chevron-background-position: -12px -20px;
             }
+        }
 
-            &:active,
-            &.pseudo-class-active,
-            &:focus,
-            &.pseudo-class-focus {
-                --btn-bg: #84222e;
+        &:active,
+        &.pseudo-class-active,
+        &:focus,
+        &.pseudo-class-focus {
+            --btn-bg: #84222e;
 
-                &::after{
-                    --chevron-background-position: -12px -40px;
-                }
+            &::after{
+                --chevron-background-position: -12px -40px;
             }
         }
     }
@@ -207,26 +209,26 @@ Styleguide Buttons.Dropdown.1_Colors
         --menu-border: #c18d0a;
         --btn-hover-box-shadow: rgba(244, 197, 77, 0.6);
         --chevron-background-position: -12px 0;
+    }
 
-        .m-dropdown-btn__trigger {
-            &:hover,
-            &.pseudo-class-hover {
-                --btn-bg: #f4c54d;
+    &--warning &__trigger {
+        &:hover,
+        &.pseudo-class-hover {
+            --btn-bg: #f4c54d;
 
-                &::after {
-                    --chevron-background-position: -12px -20px;
-                }
+            &::after {
+                --chevron-background-position: -12px -20px;
             }
+        }
 
-            &:active,
-            &.pseudo-class-active,
-            &:focus,
-            &.pseudo-class-focus {
-                --btn-bg: #916a08;
+        &:active,
+        &.pseudo-class-active,
+        &:focus,
+        &.pseudo-class-focus {
+            --btn-bg: #916a08;
 
-                &::after{
-                    --chevron-background-position: -12px -40px;
-                }
+            &::after{
+                --chevron-background-position: -12px -40px;
             }
         }
     }
@@ -237,6 +239,10 @@ Styleguide Buttons.Dropdown.1_Colors
 
     &--compact .m-dropdown-btn__trigger{
         padding: 5px 15px;
+    }
+
+    &--right &__menu {
+        right: 0;
     }
 }
 
@@ -275,19 +281,19 @@ Styleguide Buttons.Dropdown.1_Colors
             --btn-txt: #fff;
             --menu-border: #528245;
             --btn-hover-box-shadow: rgba(77, 121, 65, 0.6);
+        }
 
-            .m-dropdown-btn__trigger {
-                &:hover,
-                &.pseudo-class-hover {
-                    --btn-bg: #79bd66;
-                }
+        &--primary &__trigger {
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #79bd66;
+            }
 
-                &:active,
-                &.pseudo-class-active,
-                &:focus,
-                &.pseudo-class-focus {
-                    --btn-bg: #35552c;
-                }
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #35552c;
             }
         }
 
@@ -296,19 +302,19 @@ Styleguide Buttons.Dropdown.1_Colors
             --btn-txt: #fff;
             --menu-border: #4f7c8e;
             --btn-hover-box-shadow: rgba(82, 107, 117, 0.6);
+        }
 
-            .m-dropdown-btn__trigger {
-                &:hover,
-                &.pseudo-class-hover {
-                    --btn-bg: #8bb5c5;
-                }
+        &--secondary &__trigger {
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #8bb5c5;
+            }
 
-                &:active,
-                &.pseudo-class-active,
-                &:focus,
-                &.pseudo-class-focus {
-                    --btn-bg: #3b5d6b;
-                }
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #3b5d6b;
             }
         }
 
@@ -317,21 +323,20 @@ Styleguide Buttons.Dropdown.1_Colors
             --btn-txt: #fff;
             --menu-border: #af2e3d;
             --btn-hover-box-shadow: rgba(138, 64, 73, 0.6);
+        }
 
-            .m-dropdown-btn__trigger {
-                &:hover,
-                &.pseudo-class-hover {
-                    --btn-bg: #e46d7b;
-                }
-
-                &:active,
-                &.pseudo-class-active,
-                &:focus,
-                &.pseudo-class-focus {
-                    --btn-bg: #84222e;
-                }
+        &--danger &__trigger {
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #e46d7b;
             }
 
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #84222e;
+            }
         }
 
         &--warning {
@@ -339,20 +344,19 @@ Styleguide Buttons.Dropdown.1_Colors
             --btn-txt: #fff;
             --menu-border: #c18d0a;
             --btn-hover-box-shadow: rgba(125, 101, 38, 0.6);
+        }
 
-            .m-dropdown-btn__trigger {
+        &--warning &__trigger {
+            &:hover,
+            &.pseudo-class-hover {
+                --btn-bg: #f4c54d;
+            }
 
-                &:hover,
-                &.pseudo-class-hover {
-                    --btn-bg: #f4c54d;
-                }
-
-                &:active,
-                &.pseudo-class-active,
-                &:focus,
-                &.pseudo-class-focus {
-                    --btn-bg: #916a08;
-                }
+            &:active,
+            &.pseudo-class-active,
+            &:focus,
+            &.pseudo-class-focus {
+                --btn-bg: #916a08;
             }
         }
     }
@@ -364,23 +368,23 @@ Dropdown Button (Sizes)
 Dropdown Button with size variants.
 
 Markup:
-<div class="m-dropdown-btn {{modifier_class}}">
+<span class="m-dropdown-btn {{modifier_class}}">
     <button class="m-dropdown-btn__trigger">Button</button>
     <div class="m-dropdown-btn__menu">
         <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
     </div>
-</div>
+</span>
 <br>
-<div class="m-dropdown-btn m-dropdown-btn--primary {{modifier_class}}">
+<span class="m-dropdown-btn m-dropdown-btn--primary {{modifier_class}}">
     <button class="m-dropdown-btn__trigger">Button</button>
     <div class="m-dropdown-btn__menu">
         <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
     </div>
-</div>
+</span>
 
 .m-dropdown-btn--large - Large size variant
 .m-dropdown-btn--compact - Compact size variant
@@ -394,26 +398,46 @@ Dropdown Button (UI states)
 Dropdown Button with UI states.
 
 Markup:
-<div class="m-dropdown-btn ">
+<span class="m-dropdown-btn">
     <button class="m-dropdown-btn__trigger {{modifier_class}}">Button</button>
     <div class="m-dropdown-btn__menu">
         <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
     </div>
-</div>
+</span>
 
-<div class="m-dropdown-btn m-dropdown-btn--primary">
+<span class="m-dropdown-btn m-dropdown-btn--primary">
     <button class="m-dropdown-btn__trigger {{modifier_class}}">Button</button>
     <div class="m-dropdown-btn__menu">
         <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
         <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
     </div>
-</div>
+</span>
 
 :hover - Mouse over state
 :active - Button pressed state
 
 Styleguide Buttons.Dropdown.3_UIStates
+*/
+
+/*
+Dropdown Button (Menu Position)
+
+Dropdown Button with Change of Menu position form Left to Right.
+
+Markup:
+<span class="m-dropdown-btn {{modifier_class}}">
+    <button class="m-dropdown-btn__trigger">Button</button>
+    <div class="m-dropdown-btn__menu">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</span>
+
+.m-dropdown-btn--right - changes the menu form left to right.
+
+Styleguide Buttons.Dropdown.3_MenuRight
 */
