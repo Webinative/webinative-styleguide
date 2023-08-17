@@ -23,7 +23,7 @@ Styleguide Buttons.Dropdown.1_Colors
 
 .m-dropdown-btn {
     --btn-bg: #dedede;
-    --btn-txt: var(--body-txt);
+    --btn-txt: #494949;
     --btn-hover-box-shadow: rgba(233, 233, 233, 0.4);
     --menu-border: #d9d9d9;
 
@@ -35,7 +35,7 @@ Styleguide Buttons.Dropdown.1_Colors
         margin: 0;
         border: none;
         padding: 10px 15px;
-        color: var(--body-txt);
+        color: var(--btn-txt);
         font-weight: bold;
         background-color: var(--btn-bg);
         border-radius: 6px;
@@ -113,13 +113,12 @@ Styleguide Buttons.Dropdown.1_Colors
 
     &--primary {
         --btn-bg: #528245;
+        --btn-txt: #fff;
         --menu-border: #528245;
         --btn-hover-box-shadow: rgba(121, 189, 102, 0.6);
         --chevron-background-position: -12px 0;
 
-        & .m-dropdown-btn__trigger {
-            color: var(--white-txt);
-
+        .m-dropdown-btn__trigger {
             &:hover,
             &.pseudo-class-hover {
                 --btn-bg: #79bd66;
@@ -144,13 +143,12 @@ Styleguide Buttons.Dropdown.1_Colors
 
     &--secondary {
         --btn-bg: #4f7c8e;
+        --btn-txt: #fff;
         --menu-border: #4f7c8e;
         --btn-hover-box-shadow : rgba(139, 181, 197, 0.6);
         --chevron-background-position: -12px 0;
 
-        & .m-dropdown-btn__trigger {
-            color: var(--white-txt);
-
+        .m-dropdown-btn__trigger {
             &:hover,
             &.pseudo-class-hover {
                 --btn-bg: #8bb5c5;
@@ -175,13 +173,12 @@ Styleguide Buttons.Dropdown.1_Colors
 
     &--danger {
         --btn-bg: #af2e3d;
+        --btn-txt: #fff;
         --menu-border: #af2e3d;
         --btn-hover-box-shadow: rgba(228, 109, 123, 0.6);
         --chevron-background-position: -12px 0;
 
-        & .m-dropdown-btn__trigger {
-            color: var(--white-txt);
-
+        .m-dropdown-btn__trigger {
             &:hover,
             &.pseudo-class-hover {
                 --btn-bg: #e46d7b;
@@ -206,13 +203,12 @@ Styleguide Buttons.Dropdown.1_Colors
 
     &--warning {
         --btn-bg: #c18d0a;
+        --btn-txt: #fff;
         --menu-border: #c18d0a;
         --btn-hover-box-shadow: rgba(244, 197, 77, 0.6);
         --chevron-background-position: -12px 0;
 
-        & .m-dropdown-btn__trigger {
-            color: var(--white-txt);
-
+        .m-dropdown-btn__trigger {
             &:hover,
             &.pseudo-class-hover {
                 --btn-bg: #f4c54d;
@@ -247,13 +243,12 @@ Styleguide Buttons.Dropdown.1_Colors
 @media (prefers-color-scheme: dark) {
     .m-dropdown-btn {
         --btn-bg: #3c3c3c;
+        --btn-txt: #dbdbdb;
         --menu-border: #3c3c3c;
         --btn-hover-box-shadow: rgba(92, 92, 92, 0.4);
         --chevron-background-position: -12px 0;
 
         &__trigger {
-            color: var(--body-txt);
-
             &:hover,
             &.pseudo-class-hover {
                 --btn-bg: #505050;
@@ -277,12 +272,11 @@ Styleguide Buttons.Dropdown.1_Colors
 
         &--primary {
             --btn-bg: #528245;
+            --btn-txt: #fff;
             --menu-border: #528245;
             --btn-hover-box-shadow: rgba(77, 121, 65, 0.6);
 
-            & .m-dropdown-btn__trigger {
-                color: var(--white-txt);
-
+            .m-dropdown-btn__trigger {
                 &:hover,
                 &.pseudo-class-hover {
                     --btn-bg: #79bd66;
@@ -299,12 +293,11 @@ Styleguide Buttons.Dropdown.1_Colors
 
         &--secondary {
             --btn-bg: #4f7c8e;
+            --btn-txt: #fff;
             --menu-border: #4f7c8e;
             --btn-hover-box-shadow: rgba(82, 107, 117, 0.6);
 
-            & .m-dropdown-btn__trigger {
-                color: var(--white-txt);
-
+            .m-dropdown-btn__trigger {
                 &:hover,
                 &.pseudo-class-hover {
                     --btn-bg: #8bb5c5;
@@ -321,12 +314,11 @@ Styleguide Buttons.Dropdown.1_Colors
 
         &--danger {
             --btn-bg: #af2e3d;
+            --btn-txt: #fff;
             --menu-border: #af2e3d;
             --btn-hover-box-shadow: rgba(138, 64, 73, 0.6);
 
-            & .m-dropdown-btn__trigger {
-                color: var(--white-txt);
-
+            .m-dropdown-btn__trigger {
                 &:hover,
                 &.pseudo-class-hover {
                     --btn-bg: #e46d7b;
@@ -344,11 +336,11 @@ Styleguide Buttons.Dropdown.1_Colors
 
         &--warning {
             --btn-bg: #c18d0a;
+            --btn-txt: #fff;
             --menu-border: #c18d0a;
             --btn-hover-box-shadow: rgba(125, 101, 38, 0.6);
 
-            & .m-dropdown-btn__trigger {
-                color: var(--white-txt);
+            .m-dropdown-btn__trigger {
 
                 &:hover,
                 &.pseudo-class-hover {
