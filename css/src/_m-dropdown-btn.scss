@@ -409,7 +409,6 @@ Markup:
 
 :hover - Mouse over state
 :active - Button pressed state
-.is-active - Active State
 
 Styleguide Buttons.Dropdown.3_UIStates
 */
@@ -432,4 +431,24 @@ Markup:
 .m-dropdown-btn--right - changes the menu form left to right.
 
 Styleguide Buttons.Dropdown.3_MenuRight
+*/
+
+/*
+Dropdown Button (Menu visible)
+
+Dropdown Button with options menu open (visible).
+
+Markup:
+<span class="m-dropdown-btn">
+    <button class="m-dropdown-btn__trigger {{modifier_class}}">Button</button>
+    <div class="m-dropdown-btn__menu is-open">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</span>
+
+.is-active - adds class to the Button.
+
+Styleguide Buttons.Dropdown.4_MenuVisible
 */
