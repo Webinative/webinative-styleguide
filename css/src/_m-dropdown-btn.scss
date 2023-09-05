@@ -84,6 +84,10 @@ Styleguide Buttons.Dropdown.1_Colors
                 background-color: var(--light-blue);
             }
         }
+
+        &.is-open {
+            display: block;
+        }
     }
 
     &__trigger {
@@ -99,17 +103,12 @@ Styleguide Buttons.Dropdown.1_Colors
 
         &:active,
         &.pseudo-class-active,
-        &:focus,
-        &.pseudo-class-focus {
+        &.is-active {
             --btn-bg: #c5c5c5;
 
             &::after {
                 --chevron-background-position: 0 -40px;
             }
-        }
-
-        &:focus + .m-dropdown-btn__menu {
-            display: block;
         }
     }
 
@@ -131,11 +130,10 @@ Styleguide Buttons.Dropdown.1_Colors
             }
         }
 
-        &:active,
-        &.pseudo-class-active,
-        &:focus,
-        &.pseudo-class-focus {
-            --btn-bg: #35552c;
+            &:active,
+            &.pseudo-class-active,
+            &.is-active {
+                --btn-bg: #35552c;
 
             &::after{
                 --chevron-background-position: -12px -40px;
@@ -161,11 +159,10 @@ Styleguide Buttons.Dropdown.1_Colors
             }
         }
 
-        &:active,
-        &.pseudo-class-active,
-        &:focus,
-        &.pseudo-class-focus {
-            --btn-bg: #3b5d6b;
+            &:active,
+            &.pseudo-class-active,
+            &.is-active {
+                --btn-bg: #3b5d6b;
 
             &::after{
                 --chevron-background-position: -12px -40px;
@@ -191,11 +188,10 @@ Styleguide Buttons.Dropdown.1_Colors
             }
         }
 
-        &:active,
-        &.pseudo-class-active,
-        &:focus,
-        &.pseudo-class-focus {
-            --btn-bg: #84222e;
+            &:active,
+            &.pseudo-class-active,
+            &.is-active {
+                --btn-bg: #84222e;
 
             &::after{
                 --chevron-background-position: -12px -40px;
@@ -223,8 +219,7 @@ Styleguide Buttons.Dropdown.1_Colors
 
         &:active,
         &.pseudo-class-active,
-        &:focus,
-        &.pseudo-class-focus {
+        &.is-active {
             --btn-bg: #916a08;
 
             &::after{
@@ -266,8 +261,7 @@ Styleguide Buttons.Dropdown.1_Colors
 
             &:active,
             &.pseudo-class-active,
-            &:focus,
-            &.pseudo-class-focus {
+            &.is-active {
                 --btn-bg: #323232;
 
                 &::after {
@@ -291,8 +285,7 @@ Styleguide Buttons.Dropdown.1_Colors
 
             &:active,
             &.pseudo-class-active,
-            &:focus,
-            &.pseudo-class-focus {
+            &.is-active {
                 --btn-bg: #35552c;
             }
         }
@@ -312,8 +305,7 @@ Styleguide Buttons.Dropdown.1_Colors
 
             &:active,
             &.pseudo-class-active,
-            &:focus,
-            &.pseudo-class-focus {
+            &.is-active {
                 --btn-bg: #3b5d6b;
             }
         }
@@ -354,8 +346,7 @@ Styleguide Buttons.Dropdown.1_Colors
 
             &:active,
             &.pseudo-class-active,
-            &:focus,
-            &.pseudo-class-focus {
+            &.is-active {
                 --btn-bg: #916a08;
             }
         }
@@ -440,4 +431,24 @@ Markup:
 .m-dropdown-btn--right - changes the menu form left to right.
 
 Styleguide Buttons.Dropdown.3_MenuRight
+*/
+
+/*
+Dropdown Button (Menu visible)
+
+Dropdown Button with options menu open (visible).
+
+Markup:
+<span class="m-dropdown-btn">
+    <button class="m-dropdown-btn__trigger {{modifier_class}}">Button</button>
+    <div class="m-dropdown-btn__menu is-open">
+        <a class="m-dropdown-btn__menu-link" href="#">Option 1</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 2</a>
+        <a class="m-dropdown-btn__menu-link" href="#">Option 3</a>
+    </div>
+</span>
+
+.is-active - Denotes the trigger pressed state.
+
+Styleguide Buttons.Dropdown.4_MenuVisible
 */
