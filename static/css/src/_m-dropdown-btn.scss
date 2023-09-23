@@ -49,7 +49,7 @@ Styleguide Buttons.Dropdown.1_Colors
             height: var(--icon-height);
             margin-inline-start: 10px;
             vertical-align: middle;
-            background-image: url('../wicons/sprite-btn-chevron.svg');
+            background-image: url('/static/wicons/sprite-btn-chevron.svg');
             background-repeat: no-repeat;
             background-position: var(--chevron-background-position);
             background-size: calc(2 * (--icon-width)) calc(3 * var(--icon-height));
