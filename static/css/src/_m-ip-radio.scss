@@ -1,19 +1,19 @@
 /*
-Checkbox (UI states)
+Radio (UI states)
 
-Input checkbox user-interaction state.
+Input radio user-interaction state.
 
 Markup:
-<div class="m-ip-checkbox">
-    <input type="checkbox" class="m-ip-checkbox__input" id="my-checkbox">
-    <label class="m-ip-checkbox__label {{modifier_class}}" for="my-checkbox" tabindex="0">Checkbox</label>
+<div class="m-ip-radio">
+    <input type="radio" class="m-ip-radio__input" id="gender-male" name="gender" value="male">
+    <label class="m-ip-radio__label {{modifier_class}}" for="gender-male" tabindex="0">Male</label>
 </div>
 
 :focus - an element that received focus
 
-Styleguide Checkbox.UIStates
+Styleguide Radio.UIStates
 */
-.m-ip-checkbox {
+.m-ip-radio {
     margin-block-end: 20px;
 
     &__input {
@@ -35,7 +35,7 @@ Styleguide Checkbox.UIStates
             margin-inline-end: 8px;
             border: 2px solid var(--ip-border);
             background-color: var(--ip-bg);
-            border-radius: 6px;
+            border-radius: 50%;
             cursor: pointer;
         }
 
@@ -68,13 +68,13 @@ Styleguide Checkbox.UIStates
             content: "";
             display: block;
             position: absolute;
-            top: 0;
+            top: 0px;
             left: 0;
             width: 24px;
             height: 24px;
-            background-image: url("../wicons/sprite-ip-checked-icons.svg");
+            background-image: url("/static/wicons/sprite-ip-checked-icons.svg");
             background-size: 24px 48px;
-            background-position: 0 0;
+            background-position: 0 -24px;
         }
     }
 
@@ -85,47 +85,47 @@ Styleguide Checkbox.UIStates
 }
 
 /*
-Checkbox (inline)
+Radio (inline)
 
-Input checkbox displayed inline.
+Input radio displayed inline.
 
 Markup:
-<div class="m-ip-checkbox m-ip-checkbox--inline">
-    <input type="checkbox" class="m-ip-checkbox__input" id="milk" name="milk">
-    <label class="m-ip-checkbox__label" for="milk" tabindex="0">Milk</label>
+<div class="m-ip-radio m-ip-radio--inline">
+    <input type="radio" class="m-ip-radio__input" id="il-gender-male" name="il_gender" value="male">
+    <label class="m-ip-radio__label" for="il-gender-male" tabindex="0">Male</label>
 </div>
-<div class="m-ip-checkbox m-ip-checkbox--inline">
-    <input type="checkbox" class="m-ip-checkbox__input" id="eggs" name="eggs">
-    <label class="m-ip-checkbox__label" for="eggs" tabindex="0">Eggs</label>
+<div class="m-ip-radio m-ip-radio--inline">
+    <input type="radio" class="m-ip-radio__input" id="il-gender-female" name="il_gender" value="female">
+    <label class="m-ip-radio__label" for="il-gender-female" tabindex="0">Female</label>
 </div>
 
-Styleguide Checkbox.Inline
+Styleguide Radio.Inline
 */
 
 /*
-Checkbox (checked)
+Radio (checked)
 
-Input checkbox checked state.
+Input radio checked state.
 
 Markup:
-<div class="m-ip-checkbox">
-    <input type="checkbox" class="m-ip-checkbox__input" id="my-checkbox" checked>
-    <label class="m-ip-checkbox__label" for="my-checkbox" tabindex="0">Checkbox</label>
+<div class="m-ip-radio">
+    <input type="radio" class="m-ip-radio__input" id="gender-male" name="gender" value="male" checked>
+    <label class="m-ip-radio__label" for="gender-male" tabindex="0">Male</label>
 </div>
 
-Styleguide Checkbox.Checked
+Styleguide Radio.Checked
 */
 
 /*
-Checkbox (disabled)
+Radio (disabled)
 
-Inputheckbox disabled state.
+Input radio disabled state.
 
 Markup:
-<div class="m-ip-checkbox">
-    <input type="checkbox" class="m-ip-checkbox__input" id="disabled-checkbox" disabled>
-    <label class="m-ip-checkbox__label" for="disabled-checkbox">Checkbox</label>
+<div class="m-ip-radio">
+    <input type="radio" class="m-ip-radio__input" id="disabled-radio" disabled>
+    <label class="m-ip-radio__label" for="disabled-radio">Radio</label>
 </div>
 
-Styleguide Checkbox.Disabled
+Styleguide Radio.Disabled
 */

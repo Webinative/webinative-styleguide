@@ -47,10 +47,6 @@ Styleguide SegmentedControls
             background-color: var(--seg-ctrl-bg--active);
         }
 
-        &.is-active + & {
-            margin-inline-start: -2px;
-        }
-
         & + &::before {
             display: block;
             position: absolute;
