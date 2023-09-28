@@ -47,6 +47,7 @@ Styleguide Buttons.3_UIStates
     &:disabled,
     &.pseudo-class-disabled {
         opacity: .5;
+        pointer-events: none;
     }
 
     &--primary {
