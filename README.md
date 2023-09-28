@@ -9,6 +9,16 @@ Frontend style guide for Webinative sites.
 1. To compile SCSS, run `yarn build:css`.
 1. To generate KSS style guide, run `yarn kss`.
 
+## Viewing the styleguide
+
+Run the python webserver,
+
+```sh
+python3 -m http.server 8008
+```
+
+Then visit `http://localhost:8008/styleguide/` from your web browser.
+
 ## VS Code extensions
 
 Install the following Visual Studio Code extensions.

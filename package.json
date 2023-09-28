@@ -4,12 +4,12 @@
   "description": "Frontend style guide for Webinative",
   "main": "index.js",
   "scripts": {
-    "compile:css": "sass --style compressed css/src/:css/dist/",
-    "prefix:css": "postcss -u autoprefixer -r css/dist/*.css",
+    "compile:css": "sass --style compressed static/css/src/:static/css/dist/",
+    "prefix:css": "postcss -u autoprefixer -r static/css/dist/*.css",
     "build:css": "yarn run compile:css && yarn run prefix:css",
-    "watch:css": "sass --style compressed --watch css/src/:css/dist/",
+    "watch:css": "sass --style compressed --watch static/css/src/:static/css/dist/",
     "kss": "./node_modules/.bin/kss --config kss-config.json",
-    "watch:kss": "onchange 'css/src/*.scss' -- npm run kss"
+    "watch:kss": "onchange 'static/css/src/*.scss' -- npm run kss"
   },
   "repository": "git@github.com:Webinative/webinative-styleguide.git",
   "author": "Magesh Ravi <magesh@webinative.com>",
