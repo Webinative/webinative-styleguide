@@ -32,9 +32,9 @@ Styleguide Buttons.Dropdown.1_Colors
     --icon-height: 20px;
     --chevron-background-position: 0;
 
-    --z-index-of-menu: 2;
-    --z-index-of-overlay-after: 1;
-    --z-index-of-overlay-before: -1;
+    --z-index-menu: 2;
+    --z-index-overlay-visible: 1;
+    --z-index-overlay-hidden: -1;
 
     position: relative;
 
@@ -44,10 +44,10 @@ Styleguide Buttons.Dropdown.1_Colors
         left: 0;
         width: 100%;
         height: 100vh;
-        z-index: var(--z-index-of-overlay-before);
+        z-index: var(--z-index-overlay-hidden);
 
         &.is-open {
-            z-index: var(--z-index-of-overlay-after);
+            z-index: var(--z-index-overlay-visible);
         }
     }
 
@@ -105,7 +105,7 @@ Styleguide Buttons.Dropdown.1_Colors
 
         &.is-open {
             display: block;
-            z-index: var(--z-index-of-menu);
+            z-index: var(--z-index-menu);
         }
     }
 
