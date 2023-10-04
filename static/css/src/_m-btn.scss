@@ -14,7 +14,6 @@ Markup:
 
 :hover - mouse over state
 :active - pressed state
-:disabled - disabled, not clickable
 
 Styleguide Buttons.3_UIStates
 */
@@ -140,6 +139,22 @@ Styleguide Buttons.3_UIStates
         }
     }
 }
+/*
+Buttons (Disabled state)
+
+Buttons with disabled states.
+
+Markup:
+<button class="m-btn" disabled>Button</button>
+<button class="m-btn m-btn--primary" disabled>Button</button>
+<button class="m-btn m-btn--secondary" disabled>Button</button>
+<button class="m-btn m-btn--danger" disabled>Button</button>
+<button class="m-btn m-btn--warning" disabled>Button</button>
+<button class="m-btn m-btn--large" disabled>Button</button>
+<button class="m-btn m-btn--compact" disabled>Button</button>
+
+Styleguide Buttons.4_disabled
+*/
 
 /*
 Buttons (colors)
