@@ -1,0 +1,89 @@
+/*
+Confirm Dialog
+
+Replacement for native confirm dialog.
+
+Markup:
+<div class="m-confirm {{ modifier_class }}">
+    <div class="m-confirm__overlay"></div>
+    <div class="m-confirm__window">
+        <div class="m-confirm__body">
+            <h4 class="m-confirm__title">Confirm</h4>
+            <p class="m-confirm__desc">This is a choice for the user – to continue or to cancel an action.</p>
+        </div>
+        <div class="m-confirm__footer">
+            <button class="m-btn">Cancel</button>
+            <button class="m-btn m-btn--primary">Confirm</button>
+        </div>
+    </div>
+</div>
+
+.is-open - Confirm dialog open.
+
+Styleguide Dialogs.Confirm
+*/
+.m-confirm {
+    --window-visible-zindex: 2;
+    --overlay-visible-zindex: 1;
+    --overlay-hidden-zindex: -1;
+    --window-hidden-zindex: -1;
+
+    position: relative;
+
+    &__overlay {
+        position: fixed;
+        z-index: var(--overlay-hidden-zindex);
+        background-color: var(--dialog-overlay-bg);
+        opacity: 0;
+        transition: opacity 400ms ease-out;
+        inset: 0;
+    }
+
+    &__window {
+        position: fixed;
+        z-index: var(--window-hidden-zindex);
+        top: 50%;
+        left: 50%;
+        max-width: 550px;
+        overflow: hidden;
+        margin-inline: auto;
+        border-radius: 16px;
+        box-shadow:
+            0px 24px 24px 0px rgba(0, 0, 0, 0.12),
+            0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    &__body {
+        padding: 16px;
+        color: var(--body-txt);
+        background-color: var(--dialog-bg);
+    }
+
+    &__title {
+        margin-block-start: 0;
+    }
+
+    &__desc {
+        margin: 0;
+    }
+
+    &__footer {
+        display: flex;
+        column-gap: 16px;
+        justify-content: flex-end;
+        padding: 16px;
+        text-align: end;
+        background-color: var(--dialog-footer-bg);
+    }
+
+    &.is-open &__overlay {
+        z-index: var(--overlay-visible-zindex);
+        opacity: 1;
+        transition: opacity 400ms ease-in;
+    }
+
+    &.is-open &__window {
+        z-index: var(--window-visible-zindex);
+    }
+}
