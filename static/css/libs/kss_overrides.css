@@ -1,0 +1,23 @@
+.m-alert.is-open .m-alert__overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.m-alert__window {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+}
+
+.m-confirm.is-open .m-confirm__overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.m-confirm__window {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+}

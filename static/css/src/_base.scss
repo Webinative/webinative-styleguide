@@ -31,6 +31,10 @@
     --ip-border--disabled: #dedede;
     --ip-bg--disabled: #efefef;
 
+    --dialog-overlay-bg: rgba(0, 0, 0, 0.5);
+    --dialog-bg: #ebf5fa;
+    --dialog-footer-bg: #fff;
+
     @media (prefers-color-scheme: dark) {
         --user-selection: #006292;
         --body-bg: #222222;
@@ -51,6 +55,10 @@
         --ip-bg: #333333;
         --ip-border--disabled: #333333;
         --ip-bg--disabled: #222222;
+
+        --dialog-overlay-bg: rgba(0, 0, 0, 0.5);
+        --dialog-bg: #2d4c5b;
+        --dialog-footer-bg: #303030;
     }
 }
 
@@ -113,7 +121,7 @@ h6 {
     text-transform: uppercase;
 }
 
-/* 
+/*
 Blockquote
 
 For quoting text from another source.
