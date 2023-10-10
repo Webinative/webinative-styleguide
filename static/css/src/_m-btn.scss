@@ -18,6 +18,8 @@ Markup:
 Styleguide Buttons.3_UIStates
 */
 .m-btn {
+    $classname: m-btn;
+
     --white-txt: #ffffff;
     --btn-bg: #dedede;
     --btn-bg--hover: #e9e9e9;
@@ -90,6 +92,33 @@ Styleguide Buttons.3_UIStates
 
     &--compact {
         padding: 5px 15px;
+    }
+
+    &--link {
+        border: none;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover {
+            border: none;
+            background-color: var(--btn-bg--hover);
+            box-shadow: 0px 4px 4px var(--btn-box-shadow--hover);
+        }
+
+        &:active {
+            background-color: var(--btn-bg--active);
+        }
+
+        &:visited {
+            color: inherit;
+        }
+    }
+
+    &--link.#{$classname}--primary,
+    &--link.#{$classname}--secondary,
+    &--link.#{$classname}--danger,
+    &--link.#{$classname}--warning {
+        color: var(--white-txt);
     }
 }
 
@@ -190,4 +219,21 @@ Markup:
 .m-btn--compact - compact sized buttons
 
 Styleguide Buttons.2_Sizes
+*/
+
+/*
+Buttons (with anchor tag)
+
+Buttons with anchor tag.
+
+Markup:
+<a href="" class="m-btn m-btn--link">Button</a>
+<a href="" class="m-btn m-btn--link m-btn--primary">Button</a>
+<a href="" class="m-btn m-btn--link m-btn--secondary">Button</a>
+<a href="" class="m-btn m-btn--link m-btn--danger">Button</a>
+<a href="" class="m-btn m-btn--link m-btn--warning">Button</a>
+<a href="" class="m-btn m-btn--link m-btn--large">Button</a>
+<a href="" class="m-btn m-btn--link m-btn--compact">Button</a>
+
+Styleguide Buttons.5_Anchor
 */
