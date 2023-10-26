@@ -70,7 +70,7 @@ Styleguide Buttons.Dropdown.1_Colors
             background-image: url('/static/wicons/sprite-btn-chevron.svg');
             background-repeat: no-repeat;
             background-position: var(--chevron-background-position);
-            background-size: calc(2 * (--icon-width)) calc(3 * var(--icon-height));
+            background-size: calc(2 * var(--icon-width)) calc(3 * var(--icon-height));
         }
     }
 
