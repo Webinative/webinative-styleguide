@@ -82,7 +82,7 @@ Styleguide Buttons.Dropdown.1_Colors
         margin-block-start: 4px;
         border: 2px solid var(--menu-border);
         padding-block: 6px;
-        background-color: #fff;
+        background-color: var(--body-bg);
         border-radius: 6px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
@@ -100,6 +100,7 @@ Styleguide Buttons.Dropdown.1_Colors
             &:hover {
                 color: #fff;
                 background-color: var(--light-blue);
+                border: none;
             }
         }
 
@@ -292,6 +293,10 @@ Styleguide Buttons.Dropdown.1_Colors
                     --chevron-background-position: -12px -40px;
                 }
             }
+        }
+
+        &__menu-link:nth-child(even) {
+            background-color: #333;
         }
 
         &--primary {
