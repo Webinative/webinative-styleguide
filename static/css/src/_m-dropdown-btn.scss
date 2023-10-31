@@ -297,6 +297,10 @@ Styleguide Buttons.Dropdown.1_Colors
 
         &__menu-link:nth-child(even) {
             background-color: #333;
+
+            &:hover {
+                background-color: var(--light-blue);
+            }
         }
 
         &--primary {
