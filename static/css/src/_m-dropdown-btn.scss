@@ -102,6 +102,10 @@ Styleguide Buttons.Dropdown.1_Colors
                 background-color: var(--light-blue);
                 border: none;
             }
+
+            &:visited {
+                color: #fff;
+            }
         }
 
         &.is-open {
