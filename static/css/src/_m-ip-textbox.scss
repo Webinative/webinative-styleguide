@@ -98,7 +98,7 @@ Styleguide Textbox.UIStates
         display: none;
         width: var(--icon-width);
         height: var(--icon-height);
-        background-image: url(/static/wicons/sprite-readonly-lock.svg);
+        background-image: url("/static/wicons/sprite-readonly-lock.svg");
         background-size: calc( 2 * var(--icon-width)) var(--icon-height);
         background-position: 0 0;
         background-repeat: no-repeat;
