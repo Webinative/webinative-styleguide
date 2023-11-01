@@ -59,10 +59,6 @@ Styleguide Textbox.UIStates
         &:read-only {
             border: 2px solid var(--ip-border);
             background-color: var(--ip-bg);
-
-            &::-webkit-input-placeholder {
-                color: var(--body-txt);
-            }
         }
     }
 
