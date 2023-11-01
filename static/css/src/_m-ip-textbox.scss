@@ -15,6 +15,7 @@ Styleguide Textbox.UIStates
 */
 .m-ip-textbox {
     margin-block-end: 20px;
+    position: relative;
 
     &__label {
         display: block;
@@ -54,6 +55,11 @@ Styleguide Textbox.UIStates
             border: 2px solid var(--ip-border--disabled);
             background-color: var(--ip-bg--disabled);
         }
+
+        &:read-only {
+            border: 2px solid var(--ip-border);
+            background-color: var(--ip-bg);
+        }
     }
 
     &__help {
@@ -75,6 +81,31 @@ Styleguide Textbox.UIStates
 
     &--has-error &__input {
         border: 2px solid var(--danger);
+    }
+
+    &::after {
+        content: "";
+        --icon-width: 24px;
+        --icon-height: 24px;
+
+        position: absolute;
+        right: 15px;
+        bottom: 10px;
+        display: none;
+        width: var(--icon-width);
+        height: var(--icon-height);
+        background-image: url("/static/wicons/sprite-readonly-lock.svg");
+        background-size: calc( 2 * var(--icon-width)) var(--icon-height);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+
+        @media (prefers-color-scheme: dark) {
+            background-position-x: calc(-1 * var(--icon-width));
+        }
+    }
+
+    &:has(&__input:read-only)::after {
+        display: block;
     }
 }
 
@@ -106,4 +137,19 @@ Markup:
 </div>
 
 Styleguide Textbox.Disabled
+*/
+
+/*
+Textbox (readonly)
+
+Input textbox readonly state.
+
+Markup:
+<div class="m-ip-textbox">
+    <label class="m-ip-textbox__label" for="readonly">Full name</label>
+    <input class="m-ip-textbox__input" type="text" id="readonly" name="full_name" placeholder="Displayed value"
+        readonly>
+</div>
+
+Styleguide Textbox.Readonly
 */
