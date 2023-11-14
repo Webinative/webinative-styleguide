@@ -43,6 +43,7 @@ Styleguide Dialogs.Alert
         z-index: var(--window-hidden-zindex);
         top: 50%;
         left: 50%;
+        width: calc(100% - 40px);
         max-width: 550px;
         overflow: hidden;
         margin-inline: auto;
