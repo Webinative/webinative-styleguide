@@ -29,6 +29,7 @@ Styleguide Textarea.UIStates
     }
 
     &__input {
+        width: 100%;
         border: 2px solid var(--ip-border);
         padding: 10px 15px;
         color: var(--body-txt);
