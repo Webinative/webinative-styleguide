@@ -1,0 +1,160 @@
+/*
+Select Menu
+
+Select-menu with searchable options.
+
+Markup:
+<div class="m-ip-select {{ modifier_class }}">
+    <div class="m-ip-select__overlay"></div>
+    <label class="m-ip-select__label">Country</label>
+    <div class="m-ip-select__input">
+        <span class="m-ip-select__display is-placeholder">Select</span>
+        <select class="m-ip-select__value" name="country" hidden>
+            <option value="1">Afghanistan</option>
+            <option value="2">Albania</option>
+            <option value="3">Algeria</option>
+            <option value="4">India</option>
+            <option value="5">Indonesia</option>
+            <option value="6">United Kingdom</option>
+            <option value="7">United States of America</option>
+        </select>
+    </div>
+    <ul class="m-ip-select__options">
+        <li data-value="1" class="m-ip-select__opt-item">Afghanistan</li>
+        <li data-value="2" class="m-ip-select__opt-item">Albania</li>
+        <li data-value="3" class="m-ip-select__opt-item">Algeria</li>
+        <li data-value="4" class="m-ip-select__opt-item">India</li>
+        <li data-value="5" class="m-ip-select__opt-item">Indonesia</li>
+        <li data-value="6" class="m-ip-select__opt-item">United Kingdom</li>
+        <li data-value="7" class="m-ip-select__opt-item">United States of America</li>
+    </ul>
+</div>
+
+.is-open - Select menu options visible.
+
+Styleguide SelectMenu.UIStates
+*/
+.m-ip-select {
+    --menu-zindex: 10;
+    --overlay-zindex: 1;
+
+    --opt-border--hover: var(--light-blue);
+
+    position: relative;
+
+    &__overlay {
+        display: none;
+        position: fixed;
+        z-index: var(--overlay-zindex);
+        background-color: rgba(0, 0, 0, 0.1);
+        inset: 0;
+    }
+    &.is-open &__overlay {
+        display: block;
+    }
+
+    &__label {
+        display: block;
+        margin-block-end: 5px;
+        font-size: 13.28px;
+        font-weight: bold;
+        line-height: 150%;
+    }
+
+    &__input {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        width: -webkit-fill-available;
+        border: 2px solid var(--ip-border);
+        padding: 10px 15px;
+        border-radius: 6px;
+        outline: none;
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &::after {
+            --icon-width: 12px;
+            --icon-height: 20px;
+            --sprite-width: 24px;
+            --sprite-height: 60px;
+
+            content: "";
+            display: block;
+            flex-shrink: 0;
+            width: var(--icon-width);
+            height: var(--icon-height);
+            background-image: url("/static/wicons/sprite-btn-chevron.svg");
+            background-repeat: no-repeat;
+            background-size: var(--sprite-width) var(--sprite-height);
+        }
+    }
+
+    &__display {
+        user-select: none;
+
+        &.is-placeholder {
+            flex-grow: 1;
+            overflow: hidden;
+            color: var(--ip-placeholder-txt);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    &__options {
+        display: flex;
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+        bottom: -3px;
+        left: 0;
+        flex-flow: column;
+        width: -webkit-fill-available;
+        max-height: calc((3 * 44px) + 24px);
+        overflow: auto;
+        margin: 0;
+        border: 2px solid var(--ip-border);
+        padding: 4px;
+        background-color: #f4f4f4;
+        list-style: none;
+        border-radius: 6px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+        transform: translateY(100%) translateY(-12px);
+        opacity: 0;
+        transition: all 0.2s linear;
+        row-gap: 6px;
+
+        @media (min-width: 768px) {
+            max-height: calc((4 * 30px) + 15px);
+        }
+    }
+
+    &.is-open &__options {
+        visibility: visible;
+        z-index: var(--menu-zindex);
+        transform: translateY(100%) translateY(2px);
+        opacity: 1;
+        transition: all 0.2s linear;
+    }
+
+    &__opt-item {
+        border: 2px solid transparent;
+        padding: 3px 6px;
+        background-color: #fff;
+        border-radius: 4px;
+        user-select: none;
+
+        &:hover {
+            border: 2px solid var(--opt-border--hover);
+        }
+
+        &:active {
+            border: 2px solid var(--opt-border--hover);
+            background-color: #e7f6ff;
+        }
+    }
+}
